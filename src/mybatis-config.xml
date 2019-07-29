@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings> -->
+	<typeAliases>
+		<!-- 为实体配置别名 -->
+		<typeAlias type="bysj.zjl.entity.User" alias="user"/>
+		<typeAlias type="bysj.zjl.entity.Role" alias="role"/>
+		<typeAlias type="bysj.zjl.entity.User_role" alias="user_role"/>
+		<typeAlias type="bysj.zjl.entity.Permission" alias="permission"/>
+		<typeAlias type="bysj.zjl.entity.Role_permission" alias="role_permission"/>
+		<typeAlias type="bysj.zjl.entity.TreeNode" alias="treeNode"/>
+	    <typeAlias type="bysj.zjl.entity.User_info" alias="userInfo"/>
+	    <typeAlias type="bysj.zjl.entity.User_info_vo" alias="userInfoVo"/>
+		<typeAlias type="bysj.zjl.entity.Process" alias="process"/>
+		<typeAlias type="bysj.zjl.entity.Topic" alias="topic"/>
+		<typeAlias type="bysj.zjl.entity.Tea_group" alias="tea_group"/>
+		<typeAlias type="bysj.zjl.entity.Stu_group" alias="stu_group"/>
+		<typeAlias type="bysj.zjl.entity.Score" alias="score"/>
+		<typeAlias type="bysj.zjl.entity.Rank" alias="rank"/>
+		<typeAlias type="bysj.zjl.entity.Notice" alias="notice"/>
+		<typeAlias type="bysj.zjl.entity.Major" alias="major"/>
+		<typeAlias type="bysj.zjl.entity.Document" alias="document"/>
+		<typeAlias type="bysj.zjl.entity.DocType" alias="docType"/>
+		<typeAlias type="bysj.zjl.entity.DocState" alias="docState"/>
+		<typeAlias type="bysj.zjl.entity.Dept" alias="dept"/>
+		<typeAlias type="bysj.zjl.entity.Classes" alias="classes"/>
+	    <typeAlias type="bysj.zjl.entity.ClassesVo" alias="classesVo"/>
+	    <typeAlias type="bysj.zjl.entity.Speech_group" alias="speechGroup"/>
+		
+	</typeAliases>	
+	<mappers>
+		<!-- spring sqlsessionfactory中自动扫描，这里空白即可 -->
+	</mappers>
+	
+</configuration>

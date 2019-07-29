@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bysj.zjl.mapper.UserMapper">
+
+	<!-- 用户登录 -->
+	<select id="userLogin" parameterType="user" resultType="user">
+		select user_id,user_name,password,role_id from user where user_id=#{user_id} and password=#{password}
+	</select>
+	<!-- 查询树byUser -->
+	<select id="queryTreeByUser" parameterType="user" resultType="permission">
+	SELECT * FROM permission WHERE permission_id IN 
+	(SELECT permission_id FROM role_permission WHERE role_id IN 
+	(SELECT role_id FROM user_role WHERE user_id =#{user_id}))
+	UNION
+	SELECT * FROM permission WHERE permission_id IN 
+	(SELECT permission_id FROM user_permission WHERE user_id =#{user_id})
+	</select>
+	
+	<!-- 查询树-->
+	<select id="queryTree" parameterType="role" resultType="permission">
+	select * from permission where permission_id not in('0')
+	</select>
+	<!-- 查询树byRole-->
+	<select id="queryTreeByRole" parameterType="role" resultType="permission">
+	SELECT * FROM permission WHERE permission_id IN(
+	SELECT permission_id FROM role_permission WHERE role_id =#{role_id}
+	)
+	</select>
+	<!-- 查询子树 -->
+	<select id="countChildNode" parameterType="String" resultType="int">
+	select count(*) from permission where parentId =#{id}
+	</select>
+	<!-- 查询Stu信息 -->
+	<select id="stuInfo" parameterType="user" resultType="userInfoVo">
+	SELECT uf.user_id,uf.user_name,uf.user_sex,uf.sfzh,uf.address,uf.tel,d.dName,m.majorName,c.cName,uf.`deptId`,uf.`majorId`,uf.`classesId` 
+	FROM user_info uf,dept d,major m,classes c 
+	WHERE uf.user_id = #{user_id} 
+	AND
+	uf.deptId = d.deptId
+	AND
+	uf.majorId = m.majorId 
+	AND
+	uf.classesId = c.classesId
+	</select>
+	<!-- 查询其他用户信息，查至院系 -->
+	<select id="userInfo" parameterType="user" resultType="userInfoVo">
+	SELECT uf.user_id,uf.user_name,uf.user_sex,uf.sfzh,uf.address,uf.tel,uf.deptId
+	FROM user_info uf
+	WHERE uf.user_id = #{user_id} 
+	</select>
+	<!-- 查询用户信息，查至专业 -->
+	<select id="teaInfo" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,ui.sfzh,ui.address,ui.tel,d.dName,m.majorName
+	FROM user_info ui,dept d,major m
+	WHERE ui.user_id = #{user_id}
+	AND ui.`deptId`=d.`deptId`
+	AND ui.`majorId`=m.`majorId`
+	</select>
+	<!-- 编辑Stu信息 -->
+	<update id="stuInfoEdit" parameterType="userInfoVo">
+	update user_info set 
+	user_id=#{user_id}, 
+	user_name=#{user_name},
+	user_sex=#{user_sex},
+	deptId = #{deptId},
+	majorId=#{majorId},
+	classesId =#{classesId},
+	sfzh=#{sfzh},
+	address=#{address},
+	tel=#{tel}
+	where user_id =#{user_id}
+	</update>
+	<!-- 编辑其他用户信息 -->
+	<update id="userInfoEdit" parameterType="userInfoVo">
+	update user_info set 
+	user_id=#{user_id}, 
+	user_name=#{user_name},
+	user_sex=#{user_sex},
+	sfzh=#{sfzh},
+	address=#{address},
+	tel=#{tel}
+	where user_id =#{user_id}
+	</update>
+	<!-- 编辑用户密码 -->
+	<update id="userPasswordEdit" parameterType="user">
+	update user set 
+	password=#{password}
+	where user_id =#{user_id}
+	</update>
+	<!-- 查询进度信息 -->
+	<select id="queryProcess"  parameterType="process" resultType="process">
+	select * from process where 1=1
+	<if test="remark!=null">
+	and remark like "%"#{remark}"%"
+	</if>
+	order by id asc
+	</select>
+	<!-- 添加process -->
+	<insert id="processAdd" parameterType="process">
+		insert into process (process_id,user_name,operate,state,remark)
+		values(#{process_id},#{user_name},#{operate},#{state},#{remark})
+	</insert>
+	<!-- 更新process -->
+	<update id="processEdit" parameterType="process">
+		update process set process_id=#{process_id},
+		user_name=#{user_name},
+		operate=#{operate},
+		state=#{state},
+		remark=#{remark}
+		where process_id =#{process_id}
+	</update>
+	<!-- 删除process -->
+	<delete id="processDel" parameterType="String">
+		delete from process
+		where process_id =#{process_id}
+	</delete>
+	<!-- 根据参数查询院系信息-->
+	<select id="queryDeptInfoByParam"  resultType="dept">
+	select * from dept d where 1=1
+		<if test="dName!=''and dName!=null">
+		  and d.dName =#{dName}
+		</if>
+		<if test="deptId!=null and deptId!=''">
+		  and d.deptId=#{deptId}
+		</if>
+	</select>
+	<!-- 根据参数查询专业信息-->
+	<select id="queryMajorInfoByParam"  resultType="major">
+	select * from major m where 1=1
+		<if test="majorName!=''and majorName!=null">
+		  and m.majorName =#{majorName}
+		</if>
+		<if test="majorId!=null and majorId!=''">
+		  and m.majorId=#{majorId}
+		</if>
+	</select>
+	<!-- 根据参数查询班级信息-->
+	<select id="queryClassesInfoByParam"  resultType="classes">
+	select * from classes c where 1=1
+		<if test="cName!=''and cName!=null">
+		  and c.cName =#{cName}
+		</if>
+		<if test="classesId!=null and classesId!=''">
+		  and c.classesId=#{classesId}
+		</if>
+	</select>
+	<!-- 查询用户类型|角色-->
+	<select id="queryRoleNameById"  parameterType="user" resultType="role">
+	select * from role where role_id = #{role_id}
+	</select>
+	
+	<!-- 教师查询学生小组信息 -->
+	<select id="groupInfo" parameterType="user" resultType="userInfoVo">
+	SELECT uf.user_id,uf.user_name,uf.user_sex,d.dName,m.majorName,c.cName,uf.sfzh,uf.address,uf.tel
+	FROM user_info uf,dept d,major m,classes c
+ 	WHERE user_id IN
+	(
+	SELECT stu_id FROM stu_group WHERE tea_id =#{user_id}
+	)
+	AND
+	uf.deptId=d.deptId
+	AND
+	uf.majorId=m.majorId
+	AND
+	uf.classesId=c.classesId
+	</select>
+	<!-- 教学秘书、教务处查询所有学生信息 -->
+	<select id="AllSgroupInfo" parameterType="user" resultType="userInfoVo">
+	SELECT uf.user_id,uf.user_name,uf.user_sex,d.dName,m.majorName,c.cName,uf.sfzh,uf.address,uf.tel
+	FROM user_info uf,dept d,major m,classes c
+ 	WHERE user_id IN
+	(
+	SELECT user_id FROM USER WHERE role_id ='1'
+	)
+	AND
+	uf.deptId=d.deptId
+	AND
+	uf.majorId=m.majorId
+	AND
+	uf.classesId=c.classesId
+	</select>
+	<!-- 教学秘书、教务处查询所有教师信息 -->
+	<select id="AllTgroupInfo" parameterType="user" resultType="userInfoVo">
+	SELECT uf.user_id,uf.user_name,uf.user_sex,uf.sfzh,uf.address,uf.tel
+	FROM user_info uf
+	WHERE user_id IN
+	(
+	SELECT user_id FROM USER WHERE role_id ='2'
+	)
+	</select>
+	<!-- 查询docType-->
+	<select id="queryDocType" parameterType="docType" resultType="docType">
+	SELECT * FROM doctype where 1=1
+	<if test="typeName!=null">
+			and typeName like "%"#{typeName}"%"
+		</if>
+	</select>
+	<!-- 添加docType -->
+	<insert id="docTypeAdd" parameterType="docType">
+		insert into doctype (typeId,typeName)
+		values(#{typeId},#{typeName})
+	</insert>
+	<!-- 更新docType -->
+	<update id="docTypeEdit" parameterType="docType">
+		update doctype set typeId=#{typeId},
+		typeName=#{typeName}
+		where typeId =#{typeId}
+	</update>
+	<!-- 删除docType -->
+	<delete id="docTypeDel" parameterType="String">
+		delete from docType
+		where typeId =#{typeId}
+	</delete>
+	<!-- 获取topic 最大编号 -->
+	<select id="maxTopicId" resultType="int">
+	SELECT topicId FROM topic  ORDER BY topicId DESC LIMIT 1
+	</select>
+</mapper>

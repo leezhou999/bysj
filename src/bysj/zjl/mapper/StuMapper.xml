@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bysj.zjl.mapper.StuMapper">
+
+	<!-- 查询指导教师信息 -->
+	<select id="queryTInfo" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,ui.address,ui.tel 
+	FROM user_info ui,dept d WHERE ui.user_id 
+	in(
+	SELECT st.tea_id FROM stu_group st WHERE st.stu_id
+	=
+	(
+	SELECT u.user_id FROM USER u WHERE u.user_id=#{user_id}
+	)
+	)
+	and ui.deptId = d.deptId
+	</select>
+	<!-- 学生查询小组信息 -->
+	<select id="querySGroupInfo" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,m.majorName,c.cName,
+	ui.address,ui.tel,st.tea_name,t.topicName
+ 	FROM `user_info` ui,dept d,major m,classes c,stu_group st,topic t
+ 	WHERE ui.user_id IN
+	(
+	SELECT st.stu_id FROM stu_group st WHERE st.tea_id in
+	(
+	SELECT st.tea_id FROM stu_group st WHERE st.stu_id
+	=
+	(
+	SELECT u.user_id FROM USER u WHERE u.user_id =#{user_id}
+	)
+	)
+	)
+	AND ui.deptId=d.deptId
+	AND ui.majorId=m.majorId
+	AND ui.classesId=c.classesId
+	AND ui.`user_id` = st.`stu_id`
+	AND t.`stu_id`=st.`stu_id`
+	</select>
+	<!-- 学生查询答辩小组信息 -->
+	<select id="querySG" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,m.majorName,c.cName,
+	ui.address,ui.tel,st.tea_name,t.topicName,t.apply
+ 	FROM `user_info` ui,dept d,major m,classes c,stu_group st,topic t
+ 	WHERE ui.user_id  =#{user_id}
+	
+	AND ui.deptId=d.deptId
+	AND ui.majorId=m.majorId
+	AND ui.classesId=c.classesId
+	AND ui.`user_id` = st.`stu_id`
+	AND t.`stu_id`=st.`stu_id`
+	</select>
+	<!-- 教师查询小组信息 -->
+	<select id="tQuerySGroupInfo" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,m.majorName,c.cName,
+	ui.address,ui.tel,st.tea_name,t.topicName
+ 	FROM `user_info` ui,dept d,major m,classes c,stu_group st,topic t
+ 	WHERE ui.user_id IN
+	(
+	SELECT st.stu_id FROM stu_group st WHERE st.tea_id=#{user_id}
+	)
+	AND ui.deptId=d.deptId
+	AND ui.majorId=m.majorId
+	AND ui.classesId=c.classesId
+	AND ui.`user_id` = st.`stu_id`
+	AND t.`stu_id`=st.`stu_id`
+	</select>
+	<!-- 学生查询D课题 -->
+	<select id="queryDTopic" parameterType="userInfoVo" resultType="topic">
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`
+	FROM topic t,dept d,major m
+	WHERE typeId ='22'
+	AND stateId ='2'
+	and stu_id=''
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	AND t.`deptId`=
+	(
+	SELECT deptId FROM user_info ui WHERE ui.`user_id`=#{user_id}
+	)
+	<if test="findstr!=null">
+	and t.user_name like "%"#{findstr}"%"
+	</if>
+	</select>
+	<!-- 学生申请课题 -->
+	<update id="sApplyTopic1" parameterType="topic">
+		update topic set stu_id=#{stu_id},chk='6'
+		where topicId =#{topicId}
+	</update>
+	<!-- 学生申请自拟课题 -->
+	<insert id="sApplyTopic2" parameterType="topic">
+		insert into topic (topicId,topicName,abs,typeId,user_name,user_id,stu_id,tea_id,deptId,majorId,stateId,chk)
+		values(#{topicId},#{topicName},#{abs},#{typeId},#{user_name},#{user_id},#{stu_id},#{tea_id},#{deptId},#{majorId},#{stateId},#{chk})
+	</insert>
+	<!-- 申请课题前检测 -->
+	<select id="sApplyChk" parameterType="topic" resultType="topic">
+	select t.typeId,t.stu_id from topic t where stu_id=#{user_id}
+	</select>
+	<select id="sApplyCount" parameterType="topic" resultType="int">
+	select count(*) from topic where stu_id=#{stu_id}
+	</select>
+	<!-- 学生撤销申请课题 -->
+	<update id="sApplyCancel" parameterType="topic">
+		update topic set stu_id='',chk='0'
+		where topicId =#{topicId}
+	</update>
+	<!-- 学生查询课题申请结果 -->
+	<select id="queryTopicResult" parameterType="userInfoVo" resultType="topic">
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,
+	t.`stu_id`,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`,t.chk
+	FROM topic t,dept d,major m
+	WHERE stu_id=#{user_id}
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	</select>
+	<!-- 申请课题，根据教师id查询教师信息 -->
+	<select id="queryTInfoByTId" parameterType="String" resultType="userInfoVo">
+	select * from user_info where user_id =#{user_id}
+	</select>
+	<!-- 学生申请后，直接绑定stu_group -->
+	<insert id="bindStuGroup" parameterType="topic">
+		insert into stu_group(stu_id,stu_name,tea_id,tea_name)
+		values(#{stu_id},#{stu_name},#{tea_id},#{tea_name})
+	</insert>
+	<!-- 撤销申请后，取消绑定stu_group -->
+	<delete id="stuGroupDel" parameterType="topic">
+		delete from stu_group where stu_id=#{user_id}
+	</delete>
+	<!-- 学生答辩申请 -->
+	<update id="sApply" parameterType="topic">
+		update topic set apply=#{apply}
+		where topicId =#{topicId}
+	</update>
+	<!-- 学生查询成绩 -->
+	<select id="querySScore" parameterType="user" resultType="score">
+	SELECT s.`stu_id`,ui.`user_name`,ui.user_sex,d.`dName`,m.`majorName`,c.`cName`,t.topicName,sg.tea_name,s.`score1`,s.`score2`,s.`score3`,s.`score4`,s.`scoreType`,s.`remark`
+	FROM score s,dept d,major m,classes c,user_info ui,topic t,stu_group sg
+	WHERE s.`stu_id`=ui.`user_id`
+	AND ui.`user_id`=#{user_id}
+	AND ui.`deptId`=d.`deptId`
+	AND ui.`majorId`=m.`majorId`
+	AND ui.`classesId`=c.`classesId`
+	AND ui.`user_id`=t.`stu_id`
+	and sg.stu_id = s.stu_id
+
+	</select>
+	<!-- 学生文档上传 -->
+	<insert id="sUpload" parameterType="document">
+		insert into document(docId,stu_id,tea_id,deptId,majorId,classesId,typeId,location)
+		values(#{docId},#{stu_id},#{tea_id},#{deptId},#{majorId},#{classesId},#{typeId},#{location})
+	</insert>
+	<!-- 根据docId查询指定文档记录 -->
+	<select id="queryDocByDocId" parameterType="String" resultType="document">
+	    select * from document where docId = #{docId}
+	</select>
+	<!-- 根据docId删除指定文档 -->
+	<delete id="deleteDocByDocId" parameterType="String">
+		delete from document where docId =#{docId}
+	</delete>
+	<!-- 学生查询个人所有文档 -->
+	<select id="queryAllDoc" parameterType="user" resultType="document">
+	select dt.typeName,doc.stu_id,sg.stu_name,ui.user_name,d.dName,m.majorName,c.cName,doc.time,ds.stateName,doc.location,doc.typeId
+	from document doc,dept d,major m,classes c,docType dt,docstate ds,user_info ui,stu_group sg
+	where doc.stu_id=#{user_id}
+	and doc.deptId = d.`deptId`
+	and doc.majorId =m.majorId
+	and doc.classesId =c.classesId
+	and dt.typeId = doc.typeId
+	and ds.stateId = doc.stateId
+	and ui.user_id=doc.tea_id
+	and sg.stu_id = doc.stu_id
+	</select>
+	<!-- 学生查看所属答辩组信息 -->
+	<select id="sQuerySpeechGroup" parameterType="user" resultType="speechGroup">
+	SELECT tg.`groupId`,tg.`groupName`,ui.user_name,sg.`time`,sg.`location`
+	FROM speech_group sg,tea_group tg,user_info ui
+	WHERE sg.`groupId`=tg.`groupId`
+	AND sg.`stu_id`=#{user_id}
+	AND ui.`user_id`=tg.`tea_id`
+	AND tg.`isHeadMan`='1'
+	</select>
+</mapper>

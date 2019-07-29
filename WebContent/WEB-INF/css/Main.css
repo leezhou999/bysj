@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+#head1{
+	font-size:15px;
+	float:right;
+	margin-right:15px;
+	text-align:center;
+	
+}
+
+#head1 a:link,a:visited,a:active{text-decoration:none;
+								 }
+#head1 a:hover{text-decoration:underline;}
+
+.bb{
+		border:1px solid #fff;
+		background:#f4fffb;
+		text-align:center;	
+}
+
+.bb a{
+		  display: block;
+		  padding:10px;
+		  width:109px;
+		  height:20px;
+		  font-weight:bold;
+		  }
+
+.bb a:link,a:visited{text-decoration:none;}
+
+.bb a:hover{
+						text-decoration:none;
+						background:#80cde7;
+}
+
+.bb a:active{text-decoration:none;}

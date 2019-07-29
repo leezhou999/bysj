@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bysj.zjl.mapper.AdminMapper">
+
+	<!-- 查询permission -->
+	<select id="queryPermission" parameterType="permission"
+		resultType="permission">
+		SELECT * FROM permission WHERE 1=1
+		<if test="permission_name!=null">
+			and permission_name like "%"#{permission_name}"%"
+		</if>
+	</select>
+	<!-- 编辑permission -->
+	<update id="permissionEdit" parameterType="permission">
+		update permission set permission_id=#{permission_id},
+		permission_name=#{permission_name},
+		permission_url=#{permission_url},
+		parentId=#{parentId},state=#{state},
+		ionCls=#{ionCls}
+		where permission_id =#{permission_id}
+	</update>
+	<!-- 增加permission -->
+	<insert id="permissionAdd" parameterType="permission">
+		insert into permission
+		values(#{permission_id},#{permission_name},#{permission_url},#{parentId},#{state},#{ionCls})
+	</insert>
+	<!-- 删除permission -->
+	<delete id="permissionDel" parameterType="String">
+		delete from permission
+		where permission_id =#{id}
+	</delete>
+	<!-- 查询userList -->
+	<select id="queryUserList" parameterType="userInfoVo"
+		resultType="userInfoVo">
+		SELECT ui.user_id,ui.user_name,ui.user_sex,r.role_name,u.isOk
+		FROM USER u,user_info ui,role r
+		WHERE u.role_id IN('0','1','2','3','6')
+		AND
+		ui.deptId=#{deptId}
+		AND u.user_id = ui.user_id
+		AND u.role_id = r.role_id
+		<if test="findstr!=null">
+			and ui.user_name like "%"#{findstr}"%"
+		</if>
+	</select>
+	
+	<!-- 添加User -->
+	<insert id="userAdd" parameterType="userInfoVo">
+		insert into user(user_id,user_name,role_id,password,isOk)
+		values(#{user_id},#{user_name},#{role_id},#{password},#{isOk})
+	</insert>
+	<!-- 同步添加stuUserInfo信息 -->
+	<insert id="stuUserInfoAdd" parameterType="userInfoVo">
+		insert into user_info(user_id,user_name,user_sex,deptId,majorId,classesId)
+		values(#{user_id},#{user_name},#{user_sex},#{deptId},#{majorId},#{classesId})
+	</insert>
+	<!-- 同步添加otherUserInfo信息 -->
+	<insert id="otherUserInfoAdd" parameterType="userInfoVo">
+		insert into user_info(user_id,user_name,user_sex,deptId)
+		values(#{user_id},#{user_name},#{user_sex},#{deptId})
+	</insert>
+	<!-- 同步添加user_role信息 -->
+	<insert id="userRoleAdd" parameterType="userInfoVo">
+		insert into user_role(user_id,role_id)
+		values(#{user_id},#{role_id})
+	</insert>
+	<!-- 删除user -->
+	<delete id="userDel" parameterType="String">
+		delete from user where
+		user_id =#{id}
+	</delete>
+	<!-- 删除userInfo -->
+	<delete id="userInfoDel" parameterType="String">
+		delete from user_info
+		where user_id =#{id}
+	</delete>
+	<!-- 删除userRole -->
+	<delete id="userRoleDel" parameterType="String">
+		delete from user_role
+		where user_id =#{id}
+	</delete>
+	<!-- 编辑user -->
+	<update id="userEdit" parameterType="userInfoVo">
+		update user set user_id=#{user_id},
+		user_name=#{user_name},
+		isOk=#{isOk}
+		where user_id =#{user_id}
+	</update>
+	<!-- 编辑userInfo -->
+	<update id="userInfoEdit" parameterType="userInfoVo">
+		update user_info set user_id=#{user_id},
+		user_name=#{user_name},
+		user_sex=#{user_sex}
+		where user_id =#{user_id}
+	</update>
+	<!-- 查询role -->
+	<select id="queryRole" parameterType="role" resultType="role">
+		SELECT * FROM role WHERE 1=1
+		<if test="role_name!=null">
+			and role_name like "%"#{role_name}"%"
+		</if>
+	</select>
+	<!-- 编辑role -->
+	<update id="roleEdit" parameterType="role">
+		update role set role_id=#{role_id},
+		role_name=#{role_name},
+		role_remark=#{role_remark}
+		where role_id =#{role_id}
+	</update>
+	<!-- 增加role -->
+	<insert id="roleAdd" parameterType="role">
+		insert into role
+		values(#{role_id},#{role_name},#{role_remark})
+	</insert>
+	<!-- 删除role -->
+	<delete id="roleDel" parameterType="String">
+		delete from role where
+		role_id =#{id}
+	</delete>
+	<!-- 删除role_permission关联关系 -->
+	<delete id="delRolePermission" parameterType="String">
+		delete from role_permission where role_id =#{role_id}
+	</delete>
+	<!-- 删除user_permission关联关系 -->
+	<delete id="delUserPermission" parameterType="String">
+		delete from user_permission where user_id =#{user_id}
+	</delete>
+	<!--统计role_permission-->
+	<select id="countNum" parameterType="String" resultType="java.lang.Integer">
+		select count(*) from role_permission where role_id=#{role_id}
+	</select>
+	<!--统计user_permission-->
+	<select id="countNumUserPermission" parameterType="String" resultType="java.lang.Integer">
+		select count(*) from user_permission where user_id=#{user_id}
+	</select>
+	<!-- 角色授权,多参数使用#{index} -->
+	<insert id="changeAuthority">
+		insert into role_permission(role_id,permission_id)
+		values(#{0},#{1})
+	</insert>
+	<!-- 对用户直接授权,多参数使用#{index} -->
+	<insert id="changeAuthorityByUser">
+		insert into user_permission(user_id,permission_id)
+		values(#{0},#{1})
+	</insert>
+	<!-- 教学秘书查询院系信息-->
+	<select id="queryDeptInfo" parameterType="user" resultType="dept">
+	select d.deptId,d.dName from dept d where deptId=
+	(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	)
+	</select>
+	<!-- 教学秘书编辑院系信息-->
+	<update id="deptInfoEdit" parameterType="dept">
+		update dept set deptId=#{deptId},
+		dName=#{dName}
+		where deptId =#{deptId}
+	</update>
+	<!-- 教学秘书查询院专业信息-->
+	<select id="queryMajorInfo" parameterType="user" resultType="major">
+	SELECT m.majorId,m.majorName,d.dName,d.deptId FROM major m,dept d
+	WHERE m.deptId=(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	)
+	AND
+	m.deptId=d.deptId
+	</select>
+	<!-- 编辑majorInfo -->
+	<update id="majorInfoEdit" parameterType="major">
+		update major set majorId=#{majorId},
+		majorName=#{majorName}
+		
+		where majorId =#{majorId}
+	</update>
+	<!-- 增加majorInfo -->
+	<insert id="majorInfoAdd" parameterType="major">
+		insert into major(majorId,majorName,deptId)
+		values(#{majorId},#{majorName},#{deptId})
+	</insert>
+	<!-- 删除majorInfo -->
+	<delete id="majorInfoDel" parameterType="String">
+		delete from major where
+		majorId =#{majorId}
+	</delete>
+	<!-- 教学秘书查询院班级信息-->
+	<select id="queryClassesInfo" parameterType="user" resultType="classes">
+	SELECT c.classesId,c.cName,m.majorName,m.majorId FROM classes c,major m
+	WHERE c.majorId IN
+	(
+	SELECT m.majorId FROM major WHERE m.deptId =
+	(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	)
+	)
+	</select>
+	<!-- 编辑班级信息 -->
+	<update id="classesInfoEdit" parameterType="classes">
+		update classes set classesId=#{classesId},
+		cName=#{cName},
+		majorId=#{majorId}
+		where classesId =#{classesId}
+	</update>
+	<!-- 增加班级信息 -->
+	<insert id="classesInfoAdd" parameterType="classes">
+		insert into classes(classesId,cName,majorId)
+		values(#{classesId},#{cName},#{majorId})
+	</insert>
+	<!-- 删除班级信息 -->
+	<delete id="classesInfoDel" parameterType="String">
+		delete from classes
+		where classesId =#{classesId}
+	</delete>
+	<!-- 教师查询答辩小组信息 -->
+	<select id="querySG" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,m.majorName,c.cName,
+	ui.address,ui.tel,st.tea_name,t.topicName,t.apply
+ 	FROM `user_info` ui,dept d,major m,classes c,stu_group st,topic t
+ 	WHERE ui.user_id IN
+	(
+	SELECT st.stu_id FROM stu_group st WHERE st.tea_id =#{user_id}
+	
+	)
+	AND ui.deptId=d.deptId
+	AND ui.majorId=m.majorId
+	AND ui.classesId=c.classesId
+	AND ui.`user_id` = st.`stu_id`
+	AND t.`stu_id`=st.`stu_id`
+	</select>
+	<!--教秘、院长查询答辩小组信息 -->
+	<select id="queryDSG" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,m.majorName,c.cName,
+	ui.address,ui.tel,st.tea_name,t.topicName,t.apply
+ 	FROM `user_info` ui,dept d,major m,classes c,stu_group st,topic t
+ 	WHERE ui.deptId =
+	(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	
+	)
+	AND ui.deptId=d.deptId
+	AND ui.majorId=m.majorId
+	AND ui.classesId=c.classesId
+	AND ui.`user_id` = st.`stu_id`
+	AND t.`stu_id`=st.`stu_id`
+	</select>
+	<!-- 教秘教学院长查询小组信息 -->
+	<select id="queryDSTGroupInfo" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,m.majorName,c.cName,
+	ui.address,ui.tel,st.tea_name,t.topicName
+ 	FROM `user_info` ui,dept d,major m,classes c,stu_group st,topic t
+ 	WHERE ui.user_id IN
+	(
+	SELECT st.stu_id FROM stu_group st WHERE st.tea_id IN
+	(
+	SELECT user_id FROM user_info WHERE deptId=(
+	SELECT deptId FROM user_info WHERE user_id =#{user_id}
+	)
+	)
+	)
+	AND ui.deptId=d.deptId
+	AND ui.majorId=m.majorId
+	AND ui.classesId=c.classesId
+	AND ui.`user_id` = st.`stu_id`
+	AND t.`stu_id`=st.`stu_id`
+	</select>
+	<!-- 教秘教学院长查询教师信息 -->
+	<select id="queryDTInfo" parameterType="user" resultType="userInfoVo">
+	
+	SELECT ui.`user_id`,ui.`user_name`,ui.`user_sex`,d.`dName` ,ui.`address`,ui.`tel`
+	FROM user_info ui,USER u,dept d
+	WHERE ui.`deptId`=
+	(
+	SELECT deptId FROM user_info WHERE user_id =#{user_id}
+	)
+	AND u.role_id='2'
+	AND u.user_id=ui.`user_id`
+	AND ui.`deptId`=d.`deptId`
+	</select>
+	<!-- 教务处查询全校小组信息 -->
+	<select id="queryAllDSTGroupInfo" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,m.majorName,c.cName,
+	ui.address,ui.tel,st.tea_name,t.topicName
+ 	FROM `user_info` ui,dept d,major m,classes c,stu_group st,topic t
+ 	WHERE 1=1
+	
+	AND ui.deptId=d.deptId
+	AND ui.majorId=m.majorId
+	AND ui.classesId=c.classesId
+	AND ui.`user_id` = st.`stu_id`
+	AND t.`stu_id`=st.`stu_id`
+	</select>
+	<!-- 教务处查询全校教师信息 -->
+	<select id="queryAllDTInfo" parameterType="user" resultType="userInfoVo">
+	SELECT ui.user_id,ui.user_name,ui.user_sex,d.dName,ui.address,ui.tel 
+	FROM user_info ui,USER u,dept d WHERE 1=1
+	AND 
+	u.role_id ='2'
+	AND
+	u.user_id = ui.`user_id`
+	
+	AND ui.deptId = d.deptId
+	</select>
+	<!-- 教师查询本人课题,包含已绑定学生和未绑定学生 -->
+	<select id="queryTTopic" parameterType="user" resultType="topic">
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,sg.stu_name,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`
+	FROM topic t,dept d,major m,stu_group sg
+	WHERE t.user_id =#{user_id}
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	AND t.`stu_id`=sg.stu_id
+	UNION
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,t.`stu_id` stu_name,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`
+	FROM topic t,dept d,major m
+	WHERE t.user_id =#{user_id}
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	AND t.`stu_id`=''
+	
+	</select>
+	<!-- 删除课题-->
+	<delete id="topicDel" parameterType="userInfoVo">
+	delete from topic  where stu_id =#{user_id} and typeId ='21'
+	</delete>
+	<!-- 删除课题 int-->
+	<delete id="topicDelInt" parameterType="int">
+	delete from topic  where topicId=#{topicId}
+	</delete>
+	<!-- 教秘查询D课题 -->
+	<select id="queryDTopic" parameterType="userInfoVo" resultType="topic">
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,sg.stu_name,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`
+	FROM topic t,dept d,major m,stu_group sg
+	WHERE typeId IN('21','22')
+	
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	AND t.`deptId`=
+	(
+	SELECT deptId FROM user_info ui WHERE ui.`user_id`=#{user_id}
+	)
+	AND sg.stu_id=t.`stu_id`
+	UNION
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,t.`stu_id` stu_name,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`
+	FROM topic t,dept d,major m
+	WHERE typeId IN('21','22')
+	
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	AND t.`deptId`=
+	(
+	SELECT deptId FROM user_info ui WHERE ui.`user_id`=#{user_id}
+	)
+	AND t.`stu_id`=''
+	<if test="findstr!=null">
+	and t.user_name like "%"#{findstr}"%"
+	</if>
+	</select>
+	<!-- 教师查询SA课题 -->
+	<select id="querySATopic" parameterType="userInfoVo" resultType="topic">
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,sg.stu_name,t.`tea_id`,d.dName,m.majorName,t.`stateId`,t.`chk`
+	FROM topic t,stu_group sg,dept d,major m
+	WHERE t.`stu_id` IN(
+	SELECT stu_id FROM stu_group WHERE tea_id=#{user_id}
+	)
+	AND sg.`stu_id`=t.`stu_id`
+	AND sg.`tea_id`=t.`tea_id`
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	</select>
+	<!-- 教秘查询DSTA课题 -->
+	<select id="queryDSTATopic" parameterType="userInfoVo" resultType="topic">
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,sg.`stu_name`,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`,t.`chk`
+
+	FROM topic t,stu_group sg,dept d,major m
+	WHERE t.`typeId`='21'
+	AND t.`stateId` in('2','3')
+	AND t.deptId = d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	AND sg.`stu_id`=t.`stu_id`
+	AND d.`deptId`=(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	)
+	UNION
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,t.`stu_id` stu_name,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`,t.`chk`
+
+	FROM topic t,dept d,major m
+	WHERE t.`typeId`='22'
+	AND t.`stateId`IN('0','1','7')
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	AND d.`deptId`=(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	)
+	</select>
+	<!-- 教务处查询全校课题 -->
+	<select id="queryAllDTopic" parameterType="userInfoVo" resultType="topic">
+	
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,t.`stu_id` stu_name,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`
+	FROM topic t,dept d,major m
+	WHERE typeId IN('21','22')
+	
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	AND t.stu_id =''
+	UNION
+	SELECT t.`topicId`,t.`topicName`,t.`abs`,t.`typeId`,t.`user_name`,t.`user_id`,t.`stu_id`,sg.stu_name,t.`tea_id`,d.`dName`,m.`majorName`,t.`stateId`
+	FROM topic t,dept d,major m,stu_group sg
+	WHERE typeId IN('21','22')
+	
+	AND t.`deptId`=d.`deptId`
+	AND t.`majorId`=m.`majorId`
+	
+	AND sg.stu_id=t.`stu_id`
+	<if test="dName!=null">
+	and d.dName like "%"#{dName}"%"
+	</if>
+	</select>
+	<!-- 教师添加课题 -->
+	<insert id="topicAdd" parameterType="topic">
+		insert into topic (topicId,topicName,abs,typeId,user_name,user_id,stu_id,tea_id,deptId,majorId,stateId,chk)
+		values(#{topicId},#{topicName},#{abs},#{typeId},#{user_name},#{user_id},'',#{tea_id},#{deptId},#{majorId},#{stateId},#{chk})
+	</insert>
+	<!-- 教师更新课题 -->
+	<update id="topicEdit" parameterType="topic">
+		update topic set topicName=#{topicName},abs=#{abs}
+		where topicId=#{topicId}
+	</update>
+	<!--课题审批-->
+	<update id="chk" parameterType="topic">
+		update topic set stateId=#{stateId},chk=#{chk}
+		where topicId=#{topicId}
+	</update>
+	<!--教秘课题审批-->
+	<update id="dChk" parameterType="topic">
+		update topic set stateId=#{stateId}
+		where topicId=#{topicId}
+	</update>
+	<!--教师审批学生答辩申请-->
+	<update id="sApplyChk" parameterType="userInfoVo">
+		update topic set apply=#{apply}
+		where stu_id=#{user_id}
+	</update>
+	<!-- 教师查看学生成绩 -->
+	<select id="queryTScore" parameterType="user" resultType="score">
+	SELECT s.`stu_id`,ui.`user_name`,ui.user_sex,d.`dName`,m.`majorName`,c.`cName`,t.topicName,sg.tea_name,s.`score1`,s.`score2`,s.`score3`,s.`score4`,s.`scoreType`,s.`remark`
+	FROM score s,dept d,major m,classes c,user_info ui,topic t,stu_group sg
+	WHERE s.`stu_id`=ui.`user_id`
+	AND ui.`user_id` IN(
+		SELECT stu_id FROM stu_group WHERE tea_id=#{user_id}
+	)
+	AND ui.`deptId`=d.`deptId`
+	AND ui.`majorId`=m.`majorId`
+	AND ui.`classesId`=c.`classesId`
+	AND ui.`user_id`=t.`stu_id`
+	AND sg.stu_id = s.stu_id
+
+	</select>
+	<!-- 教秘、院长查看学生成绩 -->
+	<select id="queryDScore" parameterType="user" resultType="score">
+	SELECT s.`stu_id`,ui.`user_name`,ui.user_sex,d.`dName`,m.`majorName`,
+	c.`cName`,t.topicName,sg.tea_name,s.`score1`,s.`score2`,s.`score3`,s.`scoreType`,s.`remark`
+	FROM score s,dept d,major m,classes c,user_info ui,topic t,stu_group sg
+	
+	WHERE s.`stu_id`=ui.`user_id`
+	AND ui.`user_id` IN(
+		SELECT user_id FROM user_info WHERE deptId=(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}	
+		)
+	)
+	AND ui.`deptId`=d.`deptId`
+	AND ui.`majorId`=m.`majorId`
+	AND ui.`classesId`=c.`classesId`
+	AND ui.`user_id`=t.`stu_id`
+	AND sg.stu_id = s.stu_id
+
+	</select>
+	<!-- 教务处查看全校成绩 -->
+	<select id="queryAllDScore" parameterType="user" resultType="score">
+	SELECT s.`stu_id`,ui.`user_name`,ui.user_sex,d.`dName`,m.`majorName`,c.`cName`,t.topicName,sg.tea_name,s.`score1`,s.`score2`,s.`score3`,s.`score4`,s.`scoreType`,s.`remark`
+	FROM score s,dept d,major m,classes c,user_info ui,topic t,stu_group sg
+	
+	WHERE s.`stu_id`=ui.`user_id`
+	AND ui.`deptId`=d.`deptId`
+	AND ui.`majorId`=m.`majorId`
+	AND ui.`classesId`=c.`classesId`
+	AND ui.`user_id`=t.`stu_id`
+	AND sg.stu_id = s.stu_id
+
+	</select>
+	<!-- 更新score -->
+	<update id="scoreEdit" parameterType="score">
+		update score set score1=#{score1},score2=#{score2},score3=#{score3},scoreType=#{scoreType}
+		where stu_id=#{stu_id}
+	</update>
+	<!-- 录入score -->
+	<insert id="scoreAdd" parameterType="score">
+		insert into score(stu_id,score1,score2,score3,remark,scoreType)
+		values(#{stu_id},#{score1},#{score2},#{score3},#{remark},#{scoreType})
+	</insert>
+	<!-- 删除score -->
+	<delete id="scoreDel" parameterType="String">
+		delete from score
+		where stu_id =#{stu_id}
+	</delete>
+	<!-- 教秘、院长查看DTG -->
+	<select id="queryDTG" parameterType="user" resultType="tea_group">
+	SELECT tg.`groupId`,tg.`groupName`,ui.`user_name`,tg.tea_id,ui.tel,d.`dName`,tg.deptId,tg.isHeadMan
+	FROM tea_group tg,user_info ui,dept d
+	WHERE 
+	tg.`deptId`=d.`deptId`
+	AND tg.`tea_id`=ui.`user_id`
+	AND tg.`deptId`=(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	)
+
+	</select>
+	<!-- 教师查看TG -->
+	<select id="queryTG" parameterType="user" resultType="tea_group">
+	SELECT tg.`groupId`,tg.`groupName`,ui.`user_name`,ui.tel,d.`dName`,tg.isHeadMan
+	FROM tea_group tg,user_info ui,dept d
+	WHERE 
+	tg.groupId =(
+		SELECT groupId FROM tea_group WHERE tea_id=#{user_id}
+	)
+	AND ui.`deptId`=d.`deptId`
+	AND ui.`user_id`=tg.`tea_id`
+
+	</select>
+	<!-- 教务处查看AllDTG -->
+	<select id="queryAllDTG" parameterType="user" resultType="tea_group">
+	SELECT tg.`groupId`,tg.`groupName`,ui.`user_name`,ui.tel,d.`dName`,tg.isHeadMan
+	FROM tea_group tg,user_info ui,dept d
+	WHERE 1=1
+	
+	AND ui.`deptId`=d.`deptId`
+	AND ui.`user_id`=tg.`tea_id`
+
+	</select>
+	<!-- 更新DTG -->
+	<update id="dTGEdit" parameterType="tea_group">
+		update tea_group set groupId=#{groupId},groupName=#{groupName},tea_id=#{tea_id},isHeadMan=#{isHeadMan}
+		where groupId=#{groupId} and tea_id=#{tea_id}
+	</update>
+	<!-- 录入DTG -->
+	<insert id="dTGAdd" parameterType="tea_group">
+		insert into tea_group(groupId,groupName,tea_id,deptId,isHeadMan)
+		values(#{groupId},#{groupName},#{tea_id},#{deptId},#{isHeadMan})
+	</insert>
+	<!-- 删除DTG -->
+	<delete id="dTGDel" parameterType="String">
+		delete from tea_group
+		where tea_id =#{tea_id}
+	</delete>
+	<!-- DTG组长校验，只能有一个 -->
+	<select id="chkDTGIsHeadMan" parameterType="String" resultType="int">
+		SELECT COUNT(isHeadMan) FROM tea_group WHERE groupId =#{group_id} AND isHeadMan='1'
+	</select>
+	<!-- 教师查询所有学生文档 -->
+	<select id="tQueryAllSDoc" parameterType="user" resultType="document">
+	SELECT dt.typeName,doc.stu_id,sg.stu_name,ui.user_name,d.dName,m.majorName,c.cName,doc.time,ds.stateName,doc.location,doc.typeId
+	FROM document doc,dept d,major m,classes c,docType dt,docstate ds,user_info ui,stu_group sg
+	WHERE doc.tea_id=#{user_id}
+	AND doc.deptId = d.`deptId`
+	AND doc.majorId =m.majorId
+	AND doc.classesId =c.classesId
+	AND dt.typeId = doc.typeId
+	AND ds.stateId = doc.stateId
+	AND ui.user_id=doc.tea_id
+	and sg.stu_id = doc.stu_id
+	</select>
+	<!-- 教秘、院长查询所有学生文档 -->
+	<select id="queryDDoc" parameterType="user" resultType="document">
+	SELECT dt.typeName,doc.stu_id,sg.stu_name,ui.user_name,d.dName,m.majorName,c.cName,doc.time,ds.stateName,doc.location,doc.typeId
+	FROM document doc,dept d,major m,classes c,docType dt,docstate ds,user_info ui,stu_group sg
+	WHERE doc.deptId =(
+		SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	)
+	AND doc.deptId = d.`deptId`
+	AND doc.majorId =m.majorId
+	AND doc.classesId =c.classesId
+	AND dt.typeId = doc.typeId
+	AND ds.stateId = doc.stateId
+	AND ui.user_id=doc.tea_id
+	and sg.stu_id = doc.stu_id
+	</select>
+	<!-- 教秘、院长查询所有学生文档 -->
+	<select id="queryAllDDoc"  resultType="document">
+	SELECT dt.typeName,doc.stu_id,sg.stu_name,ui.user_name,d.dName,m.majorName,c.cName,doc.time,ds.stateName,doc.location,doc.typeId
+	FROM document doc,dept d,major m,classes c,docType dt,docstate ds,user_info ui,stu_group sg
+	where 1=1
+	AND doc.deptId = d.`deptId`
+	AND doc.majorId =m.majorId
+	AND doc.classesId =c.classesId
+	AND dt.typeId = doc.typeId
+	AND ds.stateId = doc.stateId
+	AND ui.user_id=doc.tea_id
+	and sg.stu_id = doc.stu_id
+	</select>
+	<!-- 教师查询学生待审核文档 -->
+	<select id="tQueryChkDoc" parameterType="user" resultType="document">
+	SELECT dt.typeName,doc.stu_id,sg.stu_name,ui.user_name,d.dName,m.majorName,c.cName,doc.time,ds.stateName,doc.location,doc.typeId
+	FROM document doc,dept d,major m,classes c,docType dt,docstate ds,user_info ui,stu_group sg
+	WHERE doc.tea_id=#{user_id}
+	AND doc.deptId = d.`deptId`
+	AND doc.majorId =m.majorId
+	AND doc.classesId =c.classesId
+	AND dt.typeId = doc.typeId
+	AND ds.stateId = doc.stateId
+	AND ui.user_id=doc.tea_id
+	and sg.stu_id = doc.stu_id
+	AND doc.`stateId` IN('0','1')
+	</select>
+	<!-- 教师审批学生文档 -->
+	<update id="tChk" parameterType="document">
+		update document set stateId=#{stateId}
+		where docId=#{docId}
+	</update>
+	<!-- 教秘查询学生待审核文档 -->
+	<select id="dQueryChkDoc" parameterType="user" resultType="document">
+	SELECT dt.typeName,doc.stu_id,sg.stu_name,ui.user_name,d.dName,m.majorName,c.cName,doc.time,ds.stateName,doc.location,doc.typeId
+	FROM document doc,dept d,major m,classes c,docType dt,docstate ds,user_info ui,stu_group sg
+	WHERE doc.`deptId`=(
+	SELECT deptId FROM user_info WHERE user_id=#{user_id}
+	)
+	AND doc.deptId = d.`deptId`
+	AND doc.majorId =m.majorId
+	AND doc.classesId =c.classesId
+	AND dt.typeId = doc.typeId
+	AND ds.stateId = doc.stateId
+	AND ui.user_id=doc.tea_id
+	AND sg.stu_id = doc.stu_id
+	AND doc.`stateId` in('2','3')
+	</select>
+	<!-- 教秘审批学生文档 -->
+	<update id="dDocChk" parameterType="document">
+		update document set stateId=#{stateId}
+		where docId=#{docId}
+	</update>
+	<!-- 添加新闻 -->
+	<insert id="addNews" parameterType="notice">
+		insert into notice(title,authorName,abs,content,type) 
+		values(#{title},#{authorName},#{abs},#{content},#{type})
+	</insert>
+	<!-- 教师查看学生答辩组信息 -->
+	<select id="sQuerySpeechGroup" parameterType="user" resultType="speechGroup">
+	SELECT st.`stu_id`,st.`stu_name`,tg.`groupId`,tg.`groupName`,ui.user_name,sg.`time`,sg.`location`
+	FROM speech_group sg,tea_group tg,user_info ui,stu_group st
+	WHERE sg.`groupId`=tg.`groupId`
+	AND sg.`stu_id` IN (
+		SELECT stu_id FROM stu_group WHERE tea_id=#{user_id}
+	)
+	
+	AND ui.`user_id`=tg.`tea_id`
+	AND tg.`isHeadMan`='1'
+	AND st.`stu_id`=sg.`stu_id`
+	</select>
+	<!-- 教秘查看学生答辩组信息 -->
+	<select id="dQuerySpeechGroup" parameterType="user" resultType="speechGroup">
+	SELECT st.`stu_id`,st.`stu_name`,tg.`groupId`,tg.`groupName`,ui.user_name,sg.`time`,sg.`location`
+	FROM speech_group sg,tea_group tg,user_info ui,stu_group st
+	WHERE sg.`groupId`=tg.`groupId`
+	AND sg.`stu_id` IN (
+		SELECT ui.user_id FROM user_info ui WHERE deptId=(
+			SELECT deptId FROM user_info WHERE user_id=#{user_id}
+		)
+	)
+	
+	AND ui.`user_id`=tg.`tea_id`
+	AND tg.`isHeadMan`='1'
+	AND st.`stu_id`=sg.`stu_id`
+	
+<!-- 	UNION
+
+SELECT u.user_id stu_id,u.user_name stu_name,u.question groupId,u.question groupName,u.question user_name,u.question TIME,u.question location
+ 	FROM `user` u
+ 	WHERE u.user_id IN
+	(
+	SELECT ui.`user_id` FROM user_info ui WHERE deptId=(
+			SELECT deptId FROM user_info WHERE user_id=#{user_id}
+		)
+	
+	)
+	AND u.role_id='1' -->
+	
+	</select>
+	<!-- 账户状态校验 -->
+	<select id="chkIsLocked" parameterType="user" resultType="user">
+	select isOk from user where user_id =#{user_id}
+	</select>
+	<!-- 删除dSpeechGroup -->
+	<delete id="dSpeechGroupDel" parameterType="String">
+		delete from speech_group
+		where stu_id =#{stu_id}
+	</delete>
+	<!-- 更新dSpeechGroup -->
+	<update id="dSpeechGroupEdit" parameterType="speechGroup">
+		update speech_group set time=#{time},location=#{location}
+		where stu_id=#{stu_id}
+	</update>
+	<!-- 录入dSpeechGroup -->
+	<insert id="dSpeechGroupAdd" parameterType="speechGroup">
+		insert into speech_group(stu_id,groupId,time,location)
+		values(#{stu_id},#{groupId},#{time},#{location})
+	</insert>
+	<!-- 教务处查看学生答辩组信息 -->
+	<select id="queryAllDSpeechGroup" parameterType="user" resultType="speechGroup">
+	SELECT st.`stu_id`,st.`stu_name`,tg.`groupId`,tg.`groupName`,ui.user_name,sg.`time`,sg.`location`
+	FROM speech_group sg,tea_group tg,user_info ui,stu_group st
+	WHERE sg.`groupId`=tg.`groupId`
+	
+	AND ui.`user_id`=tg.`tea_id`
+	AND tg.`isHeadMan`='1'
+	AND st.`stu_id`=sg.`stu_id`
+
+	
+	</select>
+	<!-- 重置密码 -->
+	<update id="resetPassword" parameterType="user">
+	update user set password=#{password} where user_id=#{user_id}
+	</update>
+</mapper>
