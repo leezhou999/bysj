@@ -18,3 +18,5 @@ Spring;MyBatis;pringMVC;EasyUI;Graduation Project Management;MySQL;JSP;Java
 <p>The first and most convenient way is to download WAR files and SQL scripts directly and deploy them on your servers, such as Tomcat and mySQL. WYSIWYG.</p>
 <p>The second way, namely personal learning, research, secondary development, can download or clone the entire BYSJ repository, import SRC and WebContent into IDE, compile. The whole BYSJ library contains SRC (Java source files), WebContent (front-end page files Html, Jsp, CSS and some JavaScript script files), doc (description documents, user manuals, design documents, design vector schema), Project Release Package (project release package, including WAR files, SQL script files).</p>
 
+# TODO
+Due to time, about 10% of project and design documents come in and out, which is reflected in user interaction and functional performance optimization. At present, there are known as: 1) front-end CSS adaptation problem; 2) the "online preview function" of the "document" functional area is not good enough.
