@@ -1,5 +1,6 @@
 # ATTENTION
-The file structure in this warehouse is manually created, does not contain. git files, and can not be imported directly into IDE. Please manually import subfolders and files under SRC and WebContect after downloading.
+<p>The file structure in this warehouse is manually created, does not contain. git files, and can not be imported directly into IDE. Please manually import subfolders and files under SRC and WebContect after downloading.</p>
+<p>Contact me if you have problems deploying this project.</p>
 # bysj repository description
 This project is Leezhou's personal graduation project who was majored in software engineering in the past four years.
 # Title
