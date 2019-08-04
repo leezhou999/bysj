@@ -1,0 +1,1131 @@
+十一月 22, 2018 5:38:47 上午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+十一月 22, 2018 1:57:08 下午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 18245
+十一月 22, 2018 8:27:54 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-7.0.81\webapps\ssmdb.war
+十一月 22, 2018 8:27:54 下午 org.apache.catalina.startup.ContextConfig beforeStart
+严重: Exception fixing docBase for context [/ssmdb]
+java.io.FileNotFoundException: C:\apache-tomcat-7.0.81\webapps\ssmdb.war (另一个程序正在使用此文件，进程无法访问。)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:215)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:145)
+	at java.util.jar.JarFile.<init>(JarFile.java:154)
+	at java.util.jar.JarFile.<init>(JarFile.java:91)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:109)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.catalina.startup.ExpandWar.expand(ExpandWar.java:111)
+	at org.apache.catalina.startup.ContextConfig.fixDocBase(ContextConfig.java:737)
+	at org.apache.catalina.startup.ContextConfig.beforeStart(ContextConfig.java:862)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:390)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:388)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:144)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1009)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:985)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1127)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:2020)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+十一月 22, 2018 8:27:54 下午 org.apache.catalina.core.StandardContext resourcesStart
+严重: Error starting static Resources
+java.lang.IllegalArgumentException: Invalid or unreadable WAR file : C:\apache-tomcat-7.0.81\webapps\ssmdb.war (另一个程序正在使用此文件，进程无法访问。)
+	at org.apache.naming.resources.WARDirContext.setDocBase(WARDirContext.java:136)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:5239)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5430)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1009)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:985)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1127)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:2020)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+十一月 22, 2018 8:27:54 下午 org.apache.catalina.core.ContainerBase addChildInternal
+严重: ContainerBase.addChild: start: 
+org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ssmdb]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:162)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1009)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:985)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1127)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:2020)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.LifecycleException: Error in resourceStart()
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5431)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	... 10 more
+
+十一月 22, 2018 8:27:54 下午 org.apache.catalina.startup.HostConfig deployWAR
+严重: Error deploying web application archive C:\apache-tomcat-7.0.81\webapps\ssmdb.war
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ssmdb]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1013)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:985)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1127)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:2020)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+十一月 22, 2018 8:27:54 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deployment of web application archive C:\apache-tomcat-7.0.81\webapps\ssmdb.war has finished in 15 ms
+十一月 22, 2018 8:28:14 下午 org.apache.catalina.startup.HostConfig undeploy
+信息: Undeploying context [/ssmdb]
+十一月 22, 2018 8:28:14 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-7.0.81\webapps\ssmdb.war
+十一月 22, 2018 8:28:16 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:28:16 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:28:16 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:28:16 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:28:16 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:28:16 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:28:16 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:28:16 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4bbd5113: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:28:16 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4bbd5113: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:28:16 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1072)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5362)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5660)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1009)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:985)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1127)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:2020)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 29 more
+
+十一月 22, 2018 8:28:16 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deployment of web application archive C:\apache-tomcat-7.0.81\webapps\ssmdb.war has finished in 1,985 ms
+十一月 22, 2018 8:28:35 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:28:35 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:28:35 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:28:35 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:28:35 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:28:35 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:28:35 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3b040584: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:28:35 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3b040584: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:28:35 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 8:30:06 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:30:06 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:30:06 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:30:06 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:30:06 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:30:06 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:30:06 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@28a148cd: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:30:06 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@28a148cd: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:30:06 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 8:31:26 下午 org.apache.catalina.core.StandardServer await
+信息: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+十一月 22, 2018 8:31:26 下午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["http-apr-8080"]
+十一月 22, 2018 8:31:26 下午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["ajp-apr-8009"]
+十一月 22, 2018 8:31:26 下午 org.apache.catalina.core.StandardService stopInternal
+信息: Stopping service Catalina
+十一月 22, 2018 8:31:26 下午 org.springframework.context.support.AbstractApplicationContext doClose
+信息: Closing WebApplicationContext for namespace 'example-servlet': startup date [Wed Nov 21 19:10:11 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:31:26 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5ad3d621: defining beans [adminController,officeController,studentController,teacherController,userController,officeServiceImpl,studentServiceImpl,teacherServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,officeMapper,studentMapper,teacherMapper]; root of factory hierarchy
+十一月 22, 2018 8:31:26 下午 org.springframework.context.support.AbstractApplicationContext doClose
+信息: Closing WebApplicationContext for namespace 'example-servlet': startup date [Wed Nov 21 19:10:19 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:31:26 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@50ce82a6: defining beans [adminController,officeController,studentController,teacherController,userController,officeServiceImpl,studentServiceImpl,teacherServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,officeMapper,studentMapper,teacherMapper]; root of factory hierarchy
+十一月 22, 2018 8:31:26 下午 org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+严重: The web application [/ssmdm] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+十一月 22, 2018 8:31:26 下午 org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+严重: The web application [/ssmdm] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+十一月 22, 2018 8:31:26 下午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["http-apr-8080"]
+十一月 22, 2018 8:31:26 下午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["ajp-apr-8009"]
+十一月 22, 2018 8:31:26 下午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["http-apr-8080"]
+十一月 22, 2018 8:31:26 下午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["ajp-apr-8009"]
+十一月 22, 2018 8:31:32 下午 org.apache.tomcat.util.digester.SetPropertiesRule begin
+警告: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:ssmdm' did not find a matching property.
+十一月 22, 2018 8:31:32 下午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: Loaded APR based Apache Tomcat Native library 1.2.12 using APR version 1.5.2.
+十一月 22, 2018 8:31:32 下午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+十一月 22, 2018 8:31:33 下午 org.apache.catalina.core.AprLifecycleListener initializeSSL
+信息: OpenSSL successfully initialized (OpenSSL 1.0.2k  26 Jan 2017)
+十一月 22, 2018 8:31:33 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-apr-8080"]
+十一月 22, 2018 8:31:33 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-apr-8009"]
+十一月 22, 2018 8:31:33 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1804 ms
+十一月 22, 2018 8:31:33 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+十一月 22, 2018 8:31:33 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.81
+十一月 22, 2018 8:31:40 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:41 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:31:41 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:31:41 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:31:41 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [springmvc.xml]
+十一月 22, 2018 8:31:42 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [applicationContext.xml]
+十一月 22, 2018 8:31:42 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from class path resource [jdbc.properties]
+十一月 22, 2018 8:31:42 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3ec6fd33: defining beans [adminController,officeController,studentController,teacherController,userController,officeServiceImpl,studentServiceImpl,teacherServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,officeMapper,studentMapper,teacherMapper]; root of factory hierarchy
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllStudent(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllDocDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllDocDeal(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,com.dm.entity.Office)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/DocInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.querryInfo()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/DocDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.querryDoc()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStudent(com.dm.entity.TeacherJoin,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryTeacher],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStudent(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryStuDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStuDoc(com.dm.entity.StuLogin,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,com.dm.entity.Office)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/updateDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.UpdateDoc(com.dm.entity.Document)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/updateState],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.StudentController.updateState(com.dm.entity.Document)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.StudentController.queryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/sUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.StudentController.sUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.dm.controller.StudentController.queryInfo(com.dm.entity.StuInfoJoin,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/download],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.StudentController.download(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.dm.entity.DocumentJoin) throws java.lang.Exception
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.StudentController.queryAdvice(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryAllAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryAllAdvice(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryDocNoPass],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryDocNoPass(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryDocForNoDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryDocForNoDeal(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TeacherInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.TeacherController.querryInfo()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryStudent(javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/updateDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.TeacherController.UpdateDoc(com.dm.entity.Document)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TUploadFiles],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TUploadFiles(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TReUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TReUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.dm.controller.UserController.login(com.dm.entity.User,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTeacher_stu],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherStuInfo()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoReadDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherReadDoc()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoDealDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherDealDoc()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoUploadAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeachertoUploadDoc()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoReadAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeachertoReadAdvice()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/TUploadFiles],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTUploadFiles()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/stuUpload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toStuUpload()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.Login()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toRead],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toRead()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTop],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.Top()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toAdvice()
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/exitLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.exitLogin(javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+十一月 22, 2018 8:31:44 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+十一月 22, 2018 8:31:45 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+十一月 22, 2018 8:31:45 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+十一月 22, 2018 8:31:45 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization completed in 3843 ms
+十一月 22, 2018 8:31:45 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:45 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-7.0.81\webapps\ssmdb.war
+十一月 22, 2018 8:31:48 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:48 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:31:48 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:31:48 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:31:48 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:31:49 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:31:49 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:31:49 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@44c1f0bc: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:31:49 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@44c1f0bc: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:31:49 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1072)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5362)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5660)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1009)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:985)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1127)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:2020)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 29 more
+
+十一月 22, 2018 8:31:49 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deployment of web application archive C:\apache-tomcat-7.0.81\webapps\ssmdb.war has finished in 4,359 ms
+十一月 22, 2018 8:31:49 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\docs
+十一月 22, 2018 8:31:49 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:49 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\docs has finished in 47 ms
+十一月 22, 2018 8:31:49 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\examples
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\examples has finished in 765 ms
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\host-manager
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\host-manager has finished in 188 ms
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\manager
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\manager has finished in 62 ms
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\ROOT
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\ROOT has finished in 63 ms
+十一月 22, 2018 8:31:50 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\ssmdm
+十一月 22, 2018 8:31:52 下午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+十一月 22, 2018 8:31:52 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:31:52 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:31:52 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:31:52 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [springmvc.xml]
+十一月 22, 2018 8:31:53 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [applicationContext.xml]
+十一月 22, 2018 8:31:53 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from class path resource [jdbc.properties]
+十一月 22, 2018 8:31:53 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@29a04491: defining beans [adminController,officeController,studentController,teacherController,userController,officeServiceImpl,studentServiceImpl,teacherServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,officeMapper,studentMapper,teacherMapper]; root of factory hierarchy
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllStudent(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllDocDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllDocDeal(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,com.dm.entity.Office)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/DocInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.querryInfo()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/DocDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.querryDoc()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStudent(com.dm.entity.TeacherJoin,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryTeacher],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStudent(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryStuDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStuDoc(com.dm.entity.StuLogin,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,com.dm.entity.Office)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/updateDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.UpdateDoc(com.dm.entity.Document)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/updateState],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.StudentController.updateState(com.dm.entity.Document)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.StudentController.queryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/sUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.StudentController.sUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.dm.controller.StudentController.queryInfo(com.dm.entity.StuInfoJoin,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/download],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.StudentController.download(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.dm.entity.DocumentJoin) throws java.lang.Exception
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.StudentController.queryAdvice(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryAllAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryAllAdvice(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryDocNoPass],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryDocNoPass(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryDocForNoDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryDocForNoDeal(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TeacherInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.TeacherController.querryInfo()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryStudent(javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/updateDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.TeacherController.UpdateDoc(com.dm.entity.Document)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TUploadFiles],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TUploadFiles(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TReUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TReUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.dm.controller.UserController.login(com.dm.entity.User,javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTeacher_stu],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherStuInfo()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoReadDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherReadDoc()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoDealDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherDealDoc()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoUploadAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeachertoUploadDoc()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoReadAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeachertoReadAdvice()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/TUploadFiles],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTUploadFiles()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/stuUpload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toStuUpload()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.Login()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toRead],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toRead()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTop],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.Top()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toAdvice()
+十一月 22, 2018 8:31:54 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/exitLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.exitLogin(javax.servlet.http.HttpSession)
+十一月 22, 2018 8:31:55 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+十一月 22, 2018 8:31:55 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+十一月 22, 2018 8:31:55 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+十一月 22, 2018 8:31:55 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+十一月 22, 2018 8:31:55 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization completed in 2485 ms
+十一月 22, 2018 8:31:55 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\ssmdm has finished in 4,719 ms
+十一月 22, 2018 8:31:55 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-apr-8080"]
+十一月 22, 2018 8:31:55 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-apr-8009"]
+十一月 22, 2018 8:31:55 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 21748 ms
+十一月 22, 2018 8:34:20 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:34:20 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:34:20 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:34:20 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:34:20 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:34:20 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:34:20 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b73f8e3: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:34:20 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b73f8e3: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:34:20 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 8:34:27 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:34:27 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:34:27 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:34:27 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:34:27 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:34:27 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:34:27 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14c52bbf: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:34:27 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14c52bbf: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:34:27 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 8:34:35 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:34:35 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:34:35 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:34:35 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:34:35 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:34:35 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:34:35 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4b3f957a: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:34:35 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4b3f957a: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:34:35 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 8:35:30 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:35:30 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:35:30 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:35:30 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:35:30 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:35:30 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:35:30 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@13746a10: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:35:30 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@13746a10: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:35:30 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 8:36:09 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:36:09 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:36:09 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:36:09 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:36:09 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:36:09 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:36:09 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@51084836: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:36:09 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@51084836: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:36:09 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 8:36:51 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 8:36:51 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 20:36:51 CST 2018]; root of context hierarchy
+十一月 22, 2018 8:36:51 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 8:36:51 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 8:36:51 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 8:36:51 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@74aa2f5d: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:36:51 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@74aa2f5d: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 8:36:51 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 10:28:06 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 10:28:06 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 22:28:06 CST 2018]; root of context hierarchy
+十一月 22, 2018 10:28:06 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 10:28:06 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 10:28:06 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 10:28:06 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6de84f42: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 10:28:06 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6de84f42: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 10:28:06 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
+十一月 22, 2018 10:28:12 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+十一月 22, 2018 10:28:12 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Nov 22 22:28:12 CST 2018]; root of context hierarchy
+十一月 22, 2018 10:28:12 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc.xml]
+十一月 22, 2018 10:28:12 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+十一月 22, 2018 10:28:12 下午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from ServletContext resource [/WEB-INF/jdbc.properties]
+十一月 22, 2018 10:28:12 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7d1f4af7: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 10:28:12 下午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7d1f4af7: defining beans [personController,personServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,jspViewResolver,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,personMapper]; root of factory hierarchy
+十一月 22, 2018 10:28:12 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+严重: Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [com.it.ssm.controller.PersonController] for bean with name 'personController' defined in file [C:\apache-tomcat-7.0.81\webapps\ssmdb\WEB-INF\classes\com\it\ssm\controller\PersonController.class]: problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:916)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:602)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:521)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:462)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:135)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedClassVersionError: com/it/ssm/controller/PersonController : Unsupported major.minor version 52.0 (unable to load class com.it.ssm.controller.PersonController)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3209)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1373)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1861)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1735)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 32 more
+
