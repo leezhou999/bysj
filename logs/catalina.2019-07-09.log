@@ -1,0 +1,28 @@
+七月 09, 2019 12:35:08 下午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 18245
+七月 09, 2019 3:41:20 下午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 18245
+七月 09, 2019 4:38:50 下午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 18245
+七月 09, 2019 4:41:27 下午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the HTTP protocol
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:290)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 09, 2019 4:59:35 下午 bysj.zjl.controller.UserController login
+信息: User/login:页面传递的对象User:User [user_id=1510064108, user_name=null, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=null]
+七月 09, 2019 4:59:35 下午 bysj.zjl.controller.UserController login
+信息: User/login:service返回值:User [user_id=1510064108, user_name=周佳理, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=1]
+七月 09, 2019 4:59:35 下午 bysj.zjl.controller.UserController login
+信息: userController============User_info_vo [dName=计算机学院, majorName=null, cName=null, deptId=null, majorId=null, classesId=null, role_id=null, password=null, role_name=null, isOk=null, findstr=null, topicName=null, tea_name=null, topicId=0, stateId=null, apply=null, user_id=2, user_name=段老师]
+七月 09, 2019 11:37:24 下午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 18245

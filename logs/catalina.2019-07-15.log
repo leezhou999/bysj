@@ -1,0 +1,720 @@
+七月 15, 2019 6:50:37 上午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 15, 2019 6:51:56 上午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 15, 2019 11:04:37 上午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: Loaded APR based Apache Tomcat Native library 1.2.12 using APR version 1.5.2.
+七月 15, 2019 11:04:37 上午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+七月 15, 2019 11:04:38 上午 org.apache.catalina.core.AprLifecycleListener initializeSSL
+信息: OpenSSL successfully initialized (OpenSSL 1.0.2k  26 Jan 2017)
+七月 15, 2019 11:04:38 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-apr-80"]
+七月 15, 2019 11:04:39 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-apr-8009"]
+七月 15, 2019 11:04:39 上午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 2161 ms
+七月 15, 2019 11:04:39 上午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+七月 15, 2019 11:04:39 上午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.81
+七月 15, 2019 11:04:44 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+七月 15, 2019 11:04:44 上午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+七月 15, 2019 11:04:44 上午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Mon Jul 15 11:04:44 CST 2019]; root of context hierarchy
+七月 15, 2019 11:04:44 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [springmvc.xml]
+七月 15, 2019 11:04:45 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [applicationContext.xml]
+七月 15, 2019 11:04:46 上午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from class path resource [jdbc.properties]
+七月 15, 2019 11:04:46 上午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@35d4ea83: defining beans [adminController,stuController,userController,adminServiceImpl,stuServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,adminMapper,stuMapper,userMapper]; root of factory hierarchy
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/addNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.AdminController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Notice)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/tQueryChkDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.tQueryChkDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/tChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.tChk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Document)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dQueryChkDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.dQueryChkDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/resetPassword],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.resetPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDScore(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/querySSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.querySSpeechGroup(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDSpeechGroup(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dSpeechGroupEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dSpeechGroupEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Speech_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dSpeechGroupAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dSpeechGroupAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Speech_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dSpeechGroupDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dSpeechGroupDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Speech_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDSpeechGroup(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/permissionAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.permissionAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/delPermission],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.permissionDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryUserList],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryUserList(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/userAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.userAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/delUser],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.userDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/userEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.userEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryRole],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryRole(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/roleEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.roleEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/roleAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.roleAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/delRole],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.roleDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDeptInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDeptInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/deptInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.deptInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Dept)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/majorInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.majorInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Major)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/majorInfoAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.majorInfoAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Major)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/majorInfoDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.majorInfoDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Major)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/querySG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.querySG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDSG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDSG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDTInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDTInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryTTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryTTopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDTopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/querySATopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.querySATopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/topicEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.topicEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/topicAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.topicAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/topicDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.topicDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/chk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.chk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dDocChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dChk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Document)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dChk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/sApplyChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.sApplyChk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryTScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryTScore(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDScore(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/scoreEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.scoreEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Score)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/scoreAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.scoreAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Score)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/scoreDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.scoreDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Score)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDTG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDTG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryTG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryTG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDTG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDTG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dTGEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dTGEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dTGAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dTGAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dTGDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dTGDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/tQueryAllSDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.tQueryAllSDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/tUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.sUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryPermission],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryPermission(javax.servlet.http.HttpServletRequest,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/permissionEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.permissionEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/changeAuthority],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.changeAuthority(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Role,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/changeAuthorityByUserId],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.changeAuthorityByUserId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryMajorInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryMajorInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Major)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryClassesInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryClassesInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/classesInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.classesInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Classes)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/classesInfoAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.classesInfoAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Classes)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/classesInfoDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.classesInfoDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Classes)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDSTInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDSTGroupInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDSTGroupInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDSTGroupInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDTInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDTInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDTopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDSTATopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDSTATopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sApply],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.StuController.sApply(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/querySScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.querySScore(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/queryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.queryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sApplyTopic2],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.StuController.sApplyTopic2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sApplyTopic1],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.sApplyTopic1(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/download],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.StuController.download(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Document) throws java.lang.Exception
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sApplyCancel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.sApplyCancel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/queryTInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.queryTInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/querySSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.querySSpeechGroup(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/querySGroupInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.querySGroupInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/queryTopicResult],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.queryTopicResult(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/tQuerySGroupInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.tQuerySGroupInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/querySG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.querySG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/queryDTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.queryDTopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.StuController.sUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.SG(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toRole],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Role()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView bysj.zjl.controller.UserController.login(bysj.zjl.entity.User,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toResetPassword],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.resetPassword(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTopicResult],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.TopicResult(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toClassesInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.ClassesInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toUserList],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.UserList()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toDocType],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.DocType()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSRead],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.toRead()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toPermission],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Permission()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toDeptInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.DeptInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.UserInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Topic(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Login()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toMajorInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.MajorInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTop],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Top()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userInfoEditPage],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.UserInfoEdit(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toProcess],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Process(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTopicChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.TopicChk(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Score(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/exitLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.exitLogin(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toGroupInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.GroupInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSSpeechA],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.toSSpeechA(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSSpeechApply],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.SSpeechApply(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.TG(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toUpload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Upload(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.SDoc(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toDocChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.DocChk(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.SpeechGroup(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toMain],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Main()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.News()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTree],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTree(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/stuInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.stuInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.userInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryProcess],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.UserController.queryProcess(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Process)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/processEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.processEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Process)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/processAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.processAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Process)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/processDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.processDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Process)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryDocType],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.UserController.queryDocType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.DocType)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/docTypeAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.docTypeAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.DocType)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/docTypeEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.docTypeEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.DocType)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/docTypeDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.UserController.docTypeDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userPasswordEditPage],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.UserPasswordEdit()
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTreeByUser],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTreeByUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTreeByUser2],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTreeByUser2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTreeByUserId],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTreeByUserId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTreeByRole],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTreeByRole(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:48 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userPasswordEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.userPasswordEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User)
+七月 15, 2019 11:04:49 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+七月 15, 2019 11:04:49 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+七月 15, 2019 11:04:49 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+七月 15, 2019 11:04:49 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+七月 15, 2019 11:04:49 上午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization completed in 4640 ms
+七月 15, 2019 11:04:49 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+七月 15, 2019 11:04:49 上午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-7.0.81\webapps\bysj.war
+七月 15, 2019 11:04:52 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+七月 15, 2019 11:04:53 上午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+七月 15, 2019 11:04:53 上午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Mon Jul 15 11:04:53 CST 2019]; root of context hierarchy
+七月 15, 2019 11:04:53 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [springmvc.xml]
+七月 15, 2019 11:04:53 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [applicationContext.xml]
+七月 15, 2019 11:04:54 上午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from class path resource [jdbc.properties]
+七月 15, 2019 11:04:54 上午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@432c676e: defining beans [adminController,stuController,userController,adminServiceImpl,stuServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,adminMapper,stuMapper,userMapper]; root of factory hierarchy
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/addNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.AdminController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Notice)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/tQueryChkDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.tQueryChkDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/tChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.tChk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Document)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dQueryChkDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.dQueryChkDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/resetPassword],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.resetPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDScore(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/querySSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.querySSpeechGroup(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDSpeechGroup(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dSpeechGroupEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dSpeechGroupEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Speech_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dSpeechGroupAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dSpeechGroupAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Speech_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dSpeechGroupDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dSpeechGroupDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Speech_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDSpeechGroup(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/permissionAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.permissionAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/delPermission],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.permissionDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryUserList],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryUserList(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/userAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.userAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/delUser],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.userDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/userEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.userEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryRole],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryRole(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/roleEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.roleEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/roleAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.roleAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/delRole],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.roleDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDeptInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDeptInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/deptInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.deptInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Dept)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/majorInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.majorInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Major)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/majorInfoAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.majorInfoAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Major)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/majorInfoDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.majorInfoDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Major)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/querySG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.querySG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDSG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDSG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDTInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDTInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryTTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryTTopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDTopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/querySATopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.querySATopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/topicEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.topicEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/topicAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.topicAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/topicDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.topicDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/chk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.chk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dDocChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dChk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Document)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dChk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/sApplyChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.sApplyChk(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryTScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryTScore(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDScore(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/scoreEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.scoreEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Score)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/scoreAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.scoreAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Score)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/scoreDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.scoreDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Score)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDTG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDTG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryTG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryTG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDTG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDTG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dTGEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dTGEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dTGAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dTGAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/dTGDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.dTGDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Tea_group)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/tQueryAllSDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.tQueryAllSDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/tUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.sUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryPermission],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryPermission(javax.servlet.http.HttpServletRequest,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/permissionEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.permissionEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/changeAuthority],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.changeAuthority(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Role,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/changeAuthorityByUserId],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.changeAuthorityByUserId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo,bysj.zjl.entity.Permission)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryMajorInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryMajorInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Major)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryClassesInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryClassesInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/classesInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.classesInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Classes)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/classesInfoAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.classesInfoAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Classes)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/classesInfoDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.AdminController.classesInfoDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Classes)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDSTInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDSTGroupInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDSTGroupInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDSTGroupInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDTInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDTInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryAllDTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryAllDTopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Admin/queryDSTATopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.AdminController.queryDSTATopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sApply],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.StuController.sApply(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/querySScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.querySScore(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/queryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.queryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sApplyTopic2],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.StuController.sApplyTopic2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sApplyTopic1],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.sApplyTopic1(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/download],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.StuController.download(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Document) throws java.lang.Exception
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sApplyCancel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.sApplyCancel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,bysj.zjl.entity.Topic)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/queryTInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.queryTInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/querySSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.querySSpeechGroup(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/querySGroupInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.querySGroupInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/queryTopicResult],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.queryTopicResult(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/tQuerySGroupInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.tQuerySGroupInfo(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/querySG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.querySG(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/queryDTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.StuController.queryDTopic(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Stu/sUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.StuController.sUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.SG(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toRole],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Role()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView bysj.zjl.controller.UserController.login(bysj.zjl.entity.User,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toResetPassword],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.resetPassword(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTopicResult],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.TopicResult(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toClassesInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.ClassesInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toUserList],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.UserList()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toDocType],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.DocType()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSRead],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.toRead()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toPermission],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Permission()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toDeptInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.DeptInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.UserInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTopic],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Topic(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Login()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toMajorInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.MajorInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTop],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Top()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userInfoEditPage],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.UserInfoEdit(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toProcess],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Process(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTopicChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.TopicChk(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toScore],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Score(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/exitLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.exitLogin(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toGroupInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.GroupInfo(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSSpeechA],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.toSSpeechA(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSSpeechApply],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.SSpeechApply(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTG],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.TG(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toUpload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Upload(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.SDoc(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toDocChk],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.DocChk(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toSpeechGroup],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.SpeechGroup(javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toMain],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.Main()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.News()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTree],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTree(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/stuInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.stuInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userInfoEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.userInfoEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryProcess],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.UserController.queryProcess(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Process)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/processEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.processEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Process)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/processAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.processAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Process)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/processDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.processDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.Process)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryDocType],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.UserController.queryDocType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.DocType)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/docTypeAdd],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.docTypeAdd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.DocType)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/docTypeEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.docTypeEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.DocType)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/docTypeDel],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object bysj.zjl.controller.UserController.docTypeDel(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userPasswordEditPage],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String bysj.zjl.controller.UserController.UserPasswordEdit()
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTreeByUser],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTreeByUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTreeByUser2],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTreeByUser2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTreeByUserId],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTreeByUserId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.User_info_vo)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/queryTreeByRole],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<bysj.zjl.entity.TreeNode> bysj.zjl.controller.UserController.queryTreeByRole(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,bysj.zjl.entity.Role)
+七月 15, 2019 11:04:55 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/userPasswordEdit],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void bysj.zjl.controller.UserController.userPasswordEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,bysj.zjl.entity.User)
+七月 15, 2019 11:04:56 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+七月 15, 2019 11:04:56 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+七月 15, 2019 11:04:56 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+七月 15, 2019 11:04:56 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+七月 15, 2019 11:04:56 上午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization completed in 3672 ms
+七月 15, 2019 11:04:56 上午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deployment of web application archive C:\apache-tomcat-7.0.81\webapps\bysj.war has finished in 7,500 ms
+七月 15, 2019 11:04:56 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\docs
+七月 15, 2019 11:04:56 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+七月 15, 2019 11:04:56 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\docs has finished in 31 ms
+七月 15, 2019 11:04:56 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\examples
+七月 15, 2019 11:04:56 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+七月 15, 2019 11:04:57 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\examples has finished in 297 ms
+七月 15, 2019 11:04:57 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\host-manager
+七月 15, 2019 11:04:57 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+七月 15, 2019 11:04:57 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\host-manager has finished in 203 ms
+七月 15, 2019 11:04:57 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\manager
+七月 15, 2019 11:04:57 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+七月 15, 2019 11:04:57 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\manager has finished in 63 ms
+七月 15, 2019 11:04:57 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-apr-80"]
+七月 15, 2019 11:04:57 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-apr-8009"]
+七月 15, 2019 11:04:57 上午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 18376 ms
+七月 15, 2019 11:05:35 上午 bysj.zjl.controller.UserController login
+信息: User/login:页面传递的对象User:User [user_id=1510064108, user_name=null, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=null]
+七月 15, 2019 11:05:35 上午 bysj.zjl.controller.UserController login
+信息: User/login:service返回值:User [user_id=1510064108, user_name=周佳理, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=1]
+七月 15, 2019 11:05:35 上午 bysj.zjl.controller.UserController login
+信息: userController============User_info_vo [dName=计算机学院, majorName=null, cName=null, deptId=null, majorId=null, classesId=null, role_id=null, password=null, role_name=null, isOk=null, findstr=null, topicName=null, tea_name=null, topicId=0, stateId=null, apply=null, user_id=2, user_name=段老师]
+七月 15, 2019 11:05:36 上午 org.apache.jasper.compiler.TldLocationsCache tldScanJar
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+七月 15, 2019 11:15:10 上午 bysj.zjl.controller.UserController login
+信息: User/login:页面传递的对象User:User [user_id=1510064108, user_name=null, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=null]
+七月 15, 2019 11:15:10 上午 bysj.zjl.controller.UserController login
+信息: User/login:service返回值:User [user_id=1510064108, user_name=周佳理, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=1]
+七月 15, 2019 11:15:10 上午 bysj.zjl.controller.UserController login
+信息: userController============User_info_vo [dName=计算机学院, majorName=null, cName=null, deptId=null, majorId=null, classesId=null, role_id=null, password=null, role_name=null, isOk=null, findstr=null, topicName=null, tea_name=null, topicId=0, stateId=null, apply=null, user_id=2, user_name=段老师]
+七月 15, 2019 11:15:40 上午 bysj.zjl.controller.UserController login
+信息: User/login:页面传递的对象User:User [user_id=1510064108, user_name=null, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=null]
+七月 15, 2019 11:15:40 上午 bysj.zjl.controller.UserController login
+信息: User/login:service返回值:User [user_id=1510064108, user_name=周佳理, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=1]
+七月 15, 2019 11:15:40 上午 bysj.zjl.controller.UserController login
+信息: userController============User_info_vo [dName=计算机学院, majorName=null, cName=null, deptId=null, majorId=null, classesId=null, role_id=null, password=null, role_name=null, isOk=null, findstr=null, topicName=null, tea_name=null, topicId=0, stateId=null, apply=null, user_id=2, user_name=段老师]
+七月 15, 2019 11:35:03 上午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 18245
+七月 15, 2019 5:15:50 下午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 15, 2019 5:15:50 下午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 15, 2019 8:50:22 下午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
