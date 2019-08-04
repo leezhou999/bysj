@@ -1,0 +1,22 @@
+八月 02, 2019 8:03:01 上午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 0
+八月 02, 2019 8:03:01 上午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 18245
+八月 02, 2019 5:48:34 下午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalNioInputBuffer.parseRequestLine(InternalNioInputBuffer.java:267)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1734)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+八月 02, 2019 9:30:22 下午 bysj.zjl.controller.UserController login
+信息: User/login:页面传递的对象User:User [user_id=5, user_name=null, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=null]
+八月 02, 2019 9:30:22 下午 bysj.zjl.controller.UserController login
+信息: User/login:service返回值:User [user_id=5, user_name=ADMIN, password=96e79218965eb72c92a549dd5a330112, question=null, answer=null, isOk=null, role_id=5]
