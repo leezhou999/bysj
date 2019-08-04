@@ -1,0 +1,412 @@
+四月 11, 2019 12:18:19 上午 org.apache.coyote.ajp.AjpMessage processHeader
+严重: Invalid message received with signature 18245
+四月 11, 2019 4:32:50 上午 org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver handleHttpRequestMethodNotSupported
+警告: Request method 'GET' not supported
+四月 11, 2019 4:32:57 上午 org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver handleHttpRequestMethodNotSupported
+警告: Request method 'GET' not supported
+四月 11, 2019 4:36:29 上午 org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver handleHttpRequestMethodNotSupported
+警告: Request method 'GET' not supported
+四月 11, 2019 6:11:15 上午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+四月 11, 2019 6:54:18 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 6:54:33 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 6:58:03 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 6:58:08 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 6:59:21 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 6:59:22 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 7:00:00 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 7:00:07 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 7:02:06 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 7:02:15 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 7:03:02 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 7:03:08 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 7:04:56 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 7:05:02 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 7:51:11 上午 org.apache.catalina.core.StandardServer await
+信息: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+四月 11, 2019 7:51:11 上午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["http-apr-8080"]
+四月 11, 2019 7:51:12 上午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["ajp-apr-8009"]
+四月 11, 2019 7:51:12 上午 org.apache.catalina.core.StandardService stopInternal
+信息: Stopping service Catalina
+四月 11, 2019 7:51:12 上午 org.springframework.context.support.AbstractApplicationContext doClose
+信息: Closing WebApplicationContext for namespace 'example-servlet': startup date [Fri Mar 22 15:44:06 CST 2019]; root of context hierarchy
+四月 11, 2019 7:51:12 上午 org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+信息: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4d345b14: defining beans [adminController,officeController,studentController,teacherController,userController,officeServiceImpl,studentServiceImpl,teacherServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,officeMapper,studentMapper,teacherMapper]; root of factory hierarchy
+四月 11, 2019 7:51:12 上午 org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+严重: The web application [/ssmdm] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+四月 11, 2019 7:51:12 上午 org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+严重: The web application [/ssmdm] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+四月 11, 2019 7:51:12 上午 org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+严重: The web application [/ssmdm] appears to have started a thread named [File Reaper] but has failed to stop it. This is very likely to create a memory leak.
+四月 11, 2019 7:51:12 上午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["http-apr-8080"]
+四月 11, 2019 7:51:12 上午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["ajp-apr-8009"]
+四月 11, 2019 7:51:12 上午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["http-apr-8080"]
+四月 11, 2019 7:51:12 上午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["ajp-apr-8009"]
+四月 11, 2019 7:53:19 上午 org.apache.tomcat.util.digester.SetPropertiesRule begin
+警告: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:ssmdm' did not find a matching property.
+四月 11, 2019 7:53:19 上午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: Loaded APR based Apache Tomcat Native library 1.2.12 using APR version 1.5.2.
+四月 11, 2019 7:53:19 上午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+四月 11, 2019 7:53:19 上午 org.apache.catalina.core.AprLifecycleListener initializeSSL
+信息: OpenSSL successfully initialized (OpenSSL 1.0.2k  26 Jan 2017)
+四月 11, 2019 7:53:20 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-apr-8080"]
+四月 11, 2019 7:53:20 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-apr-8009"]
+四月 11, 2019 7:53:20 上午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1982 ms
+四月 11, 2019 7:53:20 上午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+四月 11, 2019 7:53:20 上午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.81
+四月 11, 2019 7:53:27 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+四月 11, 2019 7:53:28 上午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+四月 11, 2019 7:53:28 上午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Apr 11 07:53:28 CST 2019]; root of context hierarchy
+四月 11, 2019 7:53:28 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [springmvc.xml]
+四月 11, 2019 7:53:29 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [applicationContext.xml]
+四月 11, 2019 7:53:30 上午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from class path resource [jdbc.properties]
+四月 11, 2019 7:53:30 上午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f95dc41: defining beans [adminController,officeController,studentController,teacherController,userController,officeServiceImpl,studentServiceImpl,teacherServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,officeMapper,studentMapper,teacherMapper]; root of factory hierarchy
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllStudent(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllDocDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllDocDeal(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,com.dm.entity.Office)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/DocInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.querryInfo()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/DocDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.querryDoc()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStudent(com.dm.entity.TeacherJoin,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryTeacher],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStudent(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryStuDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStuDoc(com.dm.entity.StuLogin,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,com.dm.entity.Office)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/updateDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.UpdateDoc(com.dm.entity.Document)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/updateState],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.StudentController.updateState(com.dm.entity.Document)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.StudentController.queryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/sUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.StudentController.sUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.dm.controller.StudentController.queryInfo(com.dm.entity.StuInfoJoin,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/download],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.StudentController.download(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.dm.entity.DocumentJoin) throws java.lang.Exception
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.StudentController.queryAdvice(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryAllAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryAllAdvice(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryDocNoPass],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryDocNoPass(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryDocForNoDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryDocForNoDeal(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TeacherInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.TeacherController.querryInfo()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryStudent(javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/updateDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.TeacherController.UpdateDoc(com.dm.entity.Document)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TUploadFiles],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TUploadFiles(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TReUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TReUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.dm.controller.UserController.login(com.dm.entity.User,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTeacher_stu],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherStuInfo()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoReadDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherReadDoc()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoDealDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherDealDoc()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoUploadAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeachertoUploadDoc()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoReadAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeachertoReadAdvice()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/TUploadFiles],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTUploadFiles()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/stuUpload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toStuUpload()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.Login()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toRead],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toRead()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTop],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.Top()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toAdvice()
+四月 11, 2019 7:53:31 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/exitLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.exitLogin(javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:32 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+四月 11, 2019 7:53:32 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+四月 11, 2019 7:53:32 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+四月 11, 2019 7:53:32 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+四月 11, 2019 7:53:32 上午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization completed in 4234 ms
+四月 11, 2019 7:53:32 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+四月 11, 2019 7:53:32 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\docs
+四月 11, 2019 7:53:32 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+四月 11, 2019 7:53:32 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\docs has finished in 78 ms
+四月 11, 2019 7:53:32 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\examples
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\examples has finished in 672 ms
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\host-manager
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\host-manager has finished in 172 ms
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\manager
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\manager has finished in 94 ms
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\ROOT
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\ROOT has finished in 47 ms
+四月 11, 2019 7:53:33 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-7.0.81\webapps\ssmdm
+四月 11, 2019 7:53:36 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+四月 11, 2019 7:53:37 上午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization started
+四月 11, 2019 7:53:37 上午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'example-servlet': startup date [Thu Apr 11 07:53:37 CST 2019]; root of context hierarchy
+四月 11, 2019 7:53:37 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [springmvc.xml]
+四月 11, 2019 7:53:37 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [applicationContext.xml]
+四月 11, 2019 7:53:37 上午 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from class path resource [jdbc.properties]
+四月 11, 2019 7:53:37 上午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6021b438: defining beans [adminController,officeController,studentController,teacherController,userController,officeServiceImpl,studentServiceImpl,teacherServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#2,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#3,jspViewResolver,multipartResolver,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,transactionManager,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,fooServiceOperation,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,officeMapper,studentMapper,teacherMapper]; root of factory hierarchy
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllStudent(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllDocDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllDocDeal(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,com.dm.entity.Office)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/DocInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.querryInfo()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/DocDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.querryDoc()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStudent(com.dm.entity.TeacherJoin,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryTeacher],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStudent(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryStuDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryStuDoc(com.dm.entity.StuLogin,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/QuerryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.OfficeController.QuerryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,com.dm.entity.Office)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Office/updateDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.OfficeController.UpdateDoc(com.dm.entity.Document)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/updateState],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.StudentController.updateState(com.dm.entity.Document)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.StudentController.queryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/sUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.StudentController.sUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.dm.controller.StudentController.queryInfo(com.dm.entity.StuInfoJoin,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/download],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.StudentController.download(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.dm.entity.DocumentJoin) throws java.lang.Exception
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Student/queryAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.StudentController.queryAdvice(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryAllAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryAllAdvice(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryDocNoPass],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryDocNoPass(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryDocForNoDeal],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryDocForNoDeal(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TeacherInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.TeacherController.querryInfo()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryStudent],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryStudent(javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/QuerryAllDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object com.dm.controller.TeacherController.QuerryAllDoc(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/updateDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.TeacherController.UpdateDoc(com.dm.entity.Document)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TUploadFiles],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TUploadFiles(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/Teacher/TReUpload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.dm.controller.TeacherController.TReUpload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.dm.controller.UserController.login(com.dm.entity.User,javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTeacher_stu],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherStuInfo()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoReadDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherReadDoc()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoDealDoc],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeacherDealDoc()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoUploadAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeachertoUploadDoc()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/teachertoReadAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTeachertoReadAdvice()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/TUploadFiles],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toTUploadFiles()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/stuUpload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toStuUpload()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.Login()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toRead],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toRead()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toTop],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.Top()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/toAdvice],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.toAdvice()
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+信息: Mapped "{[/exitLogin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.dm.controller.UserController.exitLogin(javax.servlet.http.HttpSession)
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+四月 11, 2019 7:53:39 上午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet 'example': initialization completed in 2828 ms
+四月 11, 2019 7:53:39 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory C:\apache-tomcat-7.0.81\webapps\ssmdm has finished in 6,234 ms
+四月 11, 2019 7:53:39 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-apr-8080"]
+四月 11, 2019 7:53:40 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-apr-8009"]
+四月 11, 2019 7:53:40 上午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 19706 ms
+四月 11, 2019 7:55:03 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 7:55:14 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 8:03:01 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 8:03:01 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 8:03:20 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 8:03:20 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 8:03:30 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 8:03:30 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 8:03:46 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 8:03:47 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 8:03:54 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 8:05:54 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 8:05:54 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection disposing
+信息: disconnected
+四月 11, 2019 8:21:26 上午 org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver handleHttpRequestMethodNotSupported
+警告: Request method 'GET' not supported
+四月 11, 2019 8:22:25 上午 org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver handleHttpRequestMethodNotSupported
+警告: Request method 'GET' not supported
+四月 11, 2019 8:24:19 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 8:25:13 上午 com.artofsolving.jodconverter.openoffice.connection.AbstractOpenOfficeConnection connect
+信息: connected
+四月 11, 2019 12:14:25 下午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+四月 11, 2019 2:58:12 下午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+四月 11, 2019 8:00:20 下午 org.apache.coyote.http11.AbstractHttp11Processor process
+信息: Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.InternalAprInputBuffer.parseRequestLine(InternalAprInputBuffer.java:182)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1028)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2549)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2538)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
