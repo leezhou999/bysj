@@ -21,3 +21,19 @@ Spring;MyBatis;pringMVC;EasyUI;Graduation Project Management;MySQL;JSP;Java
 # TODO
 <p>Due to time, about 10% of project and design documents come in and out, which is reflected in user interaction and functional performance optimization. </p>
 <p>At present, there are known as: <br>1) front-end CSS adaptation problem;<br>2) the "online preview function" of the "document" functional area is not good enough.</p>
+
+# PrtSc
+**1.学生首页**
+![](readmeImgs/学生首页.png)
+**2.基本信息管理**
+![](readmeImgs/基本信息管理.png)
+**3.选题管理**
+![](readmeImgs/选题管理.png)
+**4.文档管理**
+![](readmeImgs/文档管理.png)
+**5.答辩管理**
+![](readmeImgs/答辩管理.png)
+**6.在线预览**
+![](readmeImgs/在线预览.png)
+**7.授权管理**
+![](readmeImgs/授权管理.png)
