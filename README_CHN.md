@@ -23,3 +23,18 @@ Spring;MyBatis;pringMVC;EasyUI;毕业设计管理;MySQL;JSP;Java
 <p>由于时间和个人能力等因素，实际工程和预期设计文档有大约10%的偏差。release版本是基于测试版本的完整打包，已经修复了常见的bug。</p>
 <p>目前已知的待改进的部分有： <br>1) 由于系统采用了easy-ui进行前端设计，前端用户交互需要进行优化;<br>2) 文档功能区，在线预览功能受服务器带宽等因素影响，加载性能需要优化。</p>
 
+# 项目截图
+**1.学生首页**
+![](readmeImgs/学生首页.png)
+**2.基本信息管理**
+![](readmeImgs/基本信息管理.png)
+**3.选题管理**
+![](readmeImgs/选题管理.png)
+**4.文档管理**
+![](readmeImgs/文档管理.png)
+**5.答辩管理**
+![](readmeImgs/答辩管理.png)
+**6.在线预览**
+![](readmeImgs/在线预览.png)
+**7.授权管理**
+![](readmeImgs/授权管理.png)
